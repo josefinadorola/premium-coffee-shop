@@ -1,0 +1,7 @@
+@import url(./styles.css);
+
+@media (max-width: 576px){
+    [class*="col-"]{
+        width: 100%;
+    }
+}
