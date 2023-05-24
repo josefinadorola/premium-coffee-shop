@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
-@import url("https://kit.fontawesome.com/22c08125c6.js");
+
 
 :root{
     --color-primary: #ffffff;
@@ -105,7 +105,7 @@ section{
 
 #hero{
     
-    background-image: url(../assets/img/cafe6.jpg);
+    background-image: url(../assets/img/cafe12.jpg);
     background-size: cover;
     height: 700px;
 }
@@ -118,7 +118,7 @@ h1{
     font-size: 4rem;
     font-weight: 800;
     letter-spacing: 1rem;
-
+   
 }
 
 #capsulas{
