@@ -5,7 +5,7 @@
   --color-primary: #000;
   --brown-light: #8d734a;
   --precio: #333;
-  --gray: #efefef;
+  --gray: #9c9c9c;
 }
 
 * {
@@ -36,13 +36,18 @@ a:hover {
   text-decoration: underline;
 }
 
-h3 {
+h2 {
   color: var(--color-font);
   font-size: 3rem;
+  text-align: center;
 }
 
-h3 span {
+h2 span {
   color: var(--brown-light);
+}
+
+p {
+  color: var(--color-font);
 }
 
 header {
@@ -54,6 +59,7 @@ header {
   height: 130px;
   position: fixed;
   top: 0;
+  background-color: var(--color-primary);
 }
 
 .logo {
@@ -111,7 +117,8 @@ section {
 #hero {
   background-image: url(../assets/img/cafe15.jpg);
   background-size: cover;
-  height: 700px;
+  height: auto;
+  padding: 10rem 0;
 }
 
 /**TITULO H1*/
@@ -166,8 +173,66 @@ section {
   height: 500px;
 }
 
+/*Tienda*/
+
+.container-shop {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.shop-categorias-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.shop-categorias {
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--brown-light);
+  border-radius: 0.5rem;
+}
+
+.container-shop-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.card-shop {
+  border: 1px solid var(--brown-light);
+  padding: 2rem;
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-shop img {
+  width: 100px;
+}
+
+.card-shop h6,
+.card-shop i {
+  color: var(--brown-light);
+  font-size: 1rem;
+}
+
+.card-shop i {
+  font-size: 1.8rem;
+}
+
 #nosotros,
-#contacto {
+#contacto,
+#shop {
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
@@ -182,15 +247,21 @@ section {
   color: var(--color-font);
   font-size: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
+  padding: 2rem;
   background-color: rgba(29, 28, 27, 0.5);
 }
 
 .container-nosotros img {
   border-radius: 0.5rem;
+  width: 400px;
+  height: 400px;
 }
 
 .nosotros-text {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -280,6 +351,25 @@ iframe {
   background-color: transparent;
 }
 
+.redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.redes i,
+.redes p {
+  font-size: 3rem;
+  color: var(--brown-light);
+  transition: 0.5s;
+}
+
+.redes:hover p,
+.redes:hover i {
+  color: var(--gray);
+}
+
 /*FOOTER*/
 
 .footer {
@@ -297,17 +387,15 @@ iframe {
 }
 
 .container-datos-footer {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   padding: 0.5rem;
   flex-wrap: wrap;
 }
 
 .item-datos-footer {
-  width: 16rem;
+  width: 12rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   gap: 2rem;
   color: var(--color-font);
 }
