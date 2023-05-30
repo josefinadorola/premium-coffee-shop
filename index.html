@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="shortcut icon"
       href="./assets/img/logo.png"
@@ -11,13 +12,16 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/mediaquerys.css" />
-
+    <script
+      src="https://kit.fontawesome.com/22c08125c6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Premium Coffee</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <i class="fa-solid fa-bars"></i>
+        <img src="./assets/img/menu.png" alt="menu" class="iconos">
         <ul class="navbar-list">
           <li><a href="./index.html#hero">INICIO</a></li>
           <li><a href="./index.html#hero">SHOP</a></li>
@@ -28,12 +32,11 @@
       <a href="./index.html"
         ><img src="./assets/img/logo.png" alt="logo" class="logo"
       /></a>
-      <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+      <a href="#"><img src="./assets/img/cart.png" alt="cart" class="iconos"></a>
     </header>
 
     <main>
       <div class="barra-envios">
-        <i class="fa-solid fa-truck"></i>
         <p>ENVIOS A DOMICILIO A TODO EL PAIS</p>
       </div>
       <section id="hero">
@@ -44,80 +47,24 @@
             <span>sabor real del</span>
             <span>café</span>
           </h1>
-          <button class="boton-h1"><a href="#nosotros">CONOCENOS >></a></button>
+          <a href="#nosotros" class="boton-h1">CONOCENOS >></a>
         </div>
       </section>
       <section id="shop">
         <h2>Nuestra <span>Tienda</span></h2>
         <div class="container-shop">
           <div class="shop-categorias-container">
-            <p class="shop-categorias">CAPSULAS</p>
-            <p class="shop-categorias">GRANOS</p>
-            <p class="shop-categorias">FILTRADO</p>
+            <button id="todos" class="shop-categorias active">TODOS</button>
+            <button id="capsulas" class="shop-categorias">CAPSULAS</button>
+            <button id="molido" class="shop-categorias">MOLIDO</button>
+            <button id="accesorios" class="shop-categorias">ACCESORIOS</button>
           </div>
-          <div class="container-shop-cards">
-            <div class="card-shop">
-              <img src="./assets/img/1.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/2.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/3.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/4.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/5.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/1.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/2.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/3.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/4.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
-            <div class="card-shop">
-              <img src="./assets/img/5.png" alt="capsula" />
-              <h6>Titulo</h6>
-              <p>$800</p>
-              <i class="fa-solid fa-cart-plus"></i>
-            </div>
+          <div id="container-shop-cards" class="container-shop-cards">
+          <!--Cargado por JS-->
+          
           </div>
-        </div>
+          
+      
       </section>
       <section id="nosotros">
         <h2><span>Nuestra</span> historia</h2>
@@ -185,7 +132,7 @@
           </form>
         </div>
         <div class="redes">
-          <i class="fa-brands fa-instagram"></i>
+        <img src="./assets/img/ig.png" alt="ig" class="iconos">
           <p>coffeepremium</p>
         </div>
       </section>
@@ -195,22 +142,22 @@
       <div class="container-footer">
         <div class="container-datos-footer">
           <div class="item-datos-footer">
-            <i class="fa-solid fa-location-dot footer-icon"></i>
+            <img src="./assets/img/ubicacion.png" alt="ubicacion" class="iconos">
             <h4>Local</h4>
             <p>Lavalle 2563, Marcos Paz, Buenos Aires</p>
           </div>
           <div class="item-datos-footer">
-            <i class="fa-solid fa-envelope footer-icon"></i>
+            <img src="./assets/img/mail.png" alt="mail" class="iconos">
             <h4>E-mail</h4>
             <p>cafepremium@gmail.com</p>
           </div>
           <div class="item-datos-footer">
-            <i class="fa-solid fa-phone footer-icon"></i>
+            <img src="./assets/img/phone.png" alt="phone" class="iconos">
             <h4>Comunicate</h4>
             <p>011 2389 2963</p>
           </div>
           <div class="item-datos-footer">
-            <i class="fa-solid fa-clock footer-icon"></i>
+            <img src="./assets/img/clock.png" alt="clock" class="iconos">
             <h4>Horarios</h4>
             <p>Lunes - Viernes: 8:00 - 24:00</p>
             <p>Sábados: 8:00 - 23:00</p>
@@ -221,10 +168,11 @@
         </div>
       </div>
     </footer>
-    <script src="./js/index.js"></script>
     <script
       src="https://kit.fontawesome.com/22c08125c6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/array.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -51,7 +51,6 @@
 
   h2 {
     font-size: 2rem;
-    text-align: center;
   }
 
   .item-datos-footer {
@@ -111,9 +110,12 @@
     width: 100%;
   }
 
-  .redes i,
   .redes p {
     font-size: 1.8rem;
+  }
+
+  .redes:hover p {
+    font-size: 1.9rem;
   }
 
   .container-datos-footer {
