@@ -4,7 +4,7 @@ const productos = [
     nombre: "Arabica",
     categoria: "capsulas",
     precio: 1700,
-    imagen: "../assets/img/1.png",
+    imagen: "./assets/img/1.png",
   },
 
   {
