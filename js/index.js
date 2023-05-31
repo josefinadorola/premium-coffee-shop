@@ -1,5 +1,9 @@
 const containerShopCards = document.querySelector("#container-shop-cards");
 const botonesCategorias = document.querySelectorAll(".shop-categorias");
+const toggleMenu = document.querySelector("#toggle-menu");
+const cart = document.querySelector("#cart");
+const nav = document.querySelector("#nav");
+const closeMenu = document.querySelector("#close-menu");
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
@@ -38,6 +42,16 @@ const init = () => {
       }
     });
   });
-};
+
+toggleMenu.addEventListener("click", () => {
+  nav.classList.add("visible");
+});
+
+
+closeMenu.addEventListener("click", () => {
+  nav.classList.remove("visible");
+});
+
+}
 
 init();

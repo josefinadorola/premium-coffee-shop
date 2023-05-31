@@ -25,6 +25,7 @@ html {
 
 body {
   background-color: var(--color-primary);
+  position: relative;
 }
 
 a {
@@ -60,8 +61,8 @@ header {
   position: fixed;
   top: 0;
   background-color: var(--color-primary);
-  z-index: 2;
-}
+  z-index: 1;
+  }
 
 .logo {
   width: 100px;
@@ -74,34 +75,62 @@ header {
   height: 110px;
 }
 
-.iconos {
-  width: 50px;
-  height: 48px;
+.iconos-header {
+  width: 30px;
+  height: 28px;
   transform: 0.5s;
+  cursor: pointer;
 }
 
-.iconos:hover {
-  width: 52px;
-  height: 52px;
+.iconos-footer {
+    width: 50px;
+    height: 48px;
+    transform: 0.5s;
+  }
+
+.iconos-header:hover {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+.nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+  background-color: var(--color-primary);
+  height: 100vh;
+  width: 20%;
+padding: 3rem;  
+opacity: 0;
+visibility: hidden;
+box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+ 
+}
+
+.visible{
+    opacity: 1;
+    visibility: visible;
 }
 
 .navbar-list {
-  position: absolute;
-  left: 0;
-  top: 130px;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  background-color: var(--color-primary);
-  width: 30%;
-  height: 100vh;
-  display: none;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+justify-content: center;
+ 
 }
 
 .navbar-list li {
-  border-bottom: 1px solid var(--color-font);
-  padding: 1rem;
+    padding: 2rem;
 }
+
+
 
 .barra-envios {
   width: 100%;
@@ -284,6 +313,8 @@ section {
   cursor: pointer;
 }
 
+/*Nosotros y contacto*/
+
 #nosotros,
 #contacto,
 #shop {
@@ -406,21 +437,18 @@ iframe {
   background-color: transparent;
 }
 
-.redes {
+.redes a{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   cursor: pointer;
-}
-
-.redes p {
   font-size: 3rem;
   color: var(--brown-light);
   transition: 0.5s;
 }
 
-.redes:hover p {
+.redes:hover a {
   font-size: 3.1rem;
 }
 
@@ -444,6 +472,7 @@ iframe {
   display: flex;
   padding: 0.5rem;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .item-datos-footer {
