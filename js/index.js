@@ -4,6 +4,7 @@ const toggleMenu = document.querySelector("#toggle-menu");
 const cart = document.querySelector("#cart");
 const nav = document.querySelector("#nav");
 const closeMenu = document.querySelector("#close-menu");
+const menuOpciones = document.querySelectorAll(".menu-opciones");
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
@@ -43,15 +44,13 @@ const init = () => {
     });
   });
 
-toggleMenu.addEventListener("click", () => {
-  nav.classList.add("visible");
-});
+  toggleMenu.addEventListener("click", () => {
+    nav.classList.add("visible");
+  });
 
-
-closeMenu.addEventListener("click", () => {
-  nav.classList.remove("visible");
-});
-
-}
+  closeMenu.addEventListener("click", () => {
+    nav.classList.remove("visible");
+  });
+};
 
 init();

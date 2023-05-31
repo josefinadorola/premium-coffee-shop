@@ -62,7 +62,7 @@ header {
   top: 0;
   background-color: var(--color-primary);
   z-index: 1;
-  }
+}
 
 .logo {
   width: 100px;
@@ -83,54 +83,45 @@ header {
 }
 
 .iconos-footer {
-    width: 50px;
-    height: 48px;
-    transform: 0.5s;
-  }
+  width: 50px;
+  height: 48px;
+  transform: 0.5s;
+}
 
 .iconos-header:hover {
   width: 32px;
   height: 32px;
 }
 
-
-
-.nav{
+.nav {
   position: absolute;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  gap: 2rem; 
+  gap: 2rem;
   background-color: var(--color-primary);
-  height: 100vh;
   width: 20%;
-padding: 3rem;  
-opacity: 0;
-visibility: hidden;
-box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-
- 
+  padding: 3rem;
+  display: none;
+  height: 0;
+  transition: all 0.5s ease;
 }
 
-.visible{
-    opacity: 1;
-    visibility: visible;
+.visible {
+  display: block;
+  height: 50vh;
 }
 
 .navbar-list {
-display: flex;
-flex-direction: column;
-gap: 1rem;
-justify-content: center;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navbar-list li {
-    padding: 2rem;
+  padding: 2rem;
 }
-
-
 
 .barra-envios {
   width: 100%;
@@ -437,7 +428,7 @@ iframe {
   background-color: transparent;
 }
 
-.redes a{
+.redes a {
   display: flex;
   align-items: center;
   justify-content: center;
