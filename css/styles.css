@@ -17,6 +17,11 @@
   transition: 0.2 linear;
 }
 
+::selection {
+  background-color: var(--color-font);
+  color: var(--color-primary);
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -79,7 +84,6 @@ header {
 .iconos-header {
   width: 35px;
   height: 35px;
-  transform: 0.5s;
   cursor: pointer;
 }
 
