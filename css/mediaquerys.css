@@ -82,16 +82,18 @@
 
 @media screen and (max-width: 576px) {
   header {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .logo {
     margin-left: 3rem;
+    width: 60px;
+    height: 60px;
   }
 
   .iconos-header {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .nav {
@@ -113,9 +115,9 @@
   }
 
   .boton-h1 {
-    width: 6.5rem;
-    height: 2rem;
-    font-size: 0.6rem;
+    width: 7.6rem;
+    height: 3rem;
+    font-size: 0.7rem;
   }
 
   h2 {
