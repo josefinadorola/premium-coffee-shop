@@ -33,10 +33,6 @@ a {
   color: var(--color-font);
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 h2 {
   color: var(--color-font);
   font-size: 3rem;
@@ -75,9 +71,14 @@ header {
   height: 110px;
 }
 
+.container-iconos {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .iconos-header {
-  width: 30px;
-  height: 28px;
+  width: 35px;
+  height: 35px;
   transform: 0.5s;
   cursor: pointer;
 }
@@ -88,29 +89,26 @@ header {
   transform: 0.5s;
 }
 
-.iconos-header:hover {
-  width: 32px;
-  height: 32px;
+.close-menu {
+  margin: 2rem;
 }
 
 .nav {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -150%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   background-color: var(--color-primary);
-  width: 20%;
-  padding: 3rem;
-  display: none;
-  height: 0;
+  width: 30%;
+  height: 100vh;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
 .visible {
-  display: block;
-  height: 50vh;
+  left: 0;
 }
 
 .navbar-list {
@@ -120,7 +118,22 @@ header {
 }
 
 .navbar-list li {
-  padding: 2rem;
+  font-size: 1.8rem;
+  padding: 1.5rem 2rem;
+}
+
+.navbar-list li:hover {
+  background-color: var(--brown-light);
+}
+
+.back-menu {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
 }
 
 .barra-envios {
