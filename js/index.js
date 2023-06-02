@@ -5,7 +5,7 @@ const cart = document.querySelector("#cart");
 const nav = document.querySelector("#nav");
 const closeMenu = document.querySelector("#close-menu");
 const backMenu = document.querySelector("#back-menu");
-const menuOpciones = document.querySelector(".menu-opciones");
+
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
@@ -60,6 +60,9 @@ const init = () => {
   closeMenu.addEventListener("click", cerrarrMenu);
   backMenu.addEventListener("click", cerrarrMenu);
   nav.addEventListener("click", cerrarrMenu);
+
+  
+
 };
 
 init();
