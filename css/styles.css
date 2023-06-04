@@ -518,12 +518,14 @@ iframe {
 
 /*LOGIN-REGISTRO*/
 
-.section-login{
+.section-login {
+  display: flex;
+  justify-content: center;
   margin-top: 200px;
   width: 100%;
 }
 
-.container-login{
+.container-login {
   max-width: 900px;
   padding: 3rem;
   display: flex;
@@ -533,18 +535,7 @@ iframe {
   gap: 3rem;
 }
 
-.container-login-titulos{
-  display: flex;
-  gap: 3rem;
-
-}
-
-.login-titulos{
-  font-size: 2rem;cursor: pointer;
-  
-}
-
-.titulo-activo{
-  text-decoration: var(--brown-light) underline;
- 
+.login-titulos {
+  font-size: 2rem;
+  cursor: pointer;
 }
