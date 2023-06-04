@@ -515,3 +515,36 @@ iframe {
 .footer-copy a {
   color: var(--brown-light);
 }
+
+/*LOGIN-REGISTRO*/
+
+.section-login{
+  margin-top: 200px;
+  width: 100%;
+}
+
+.container-login{
+  max-width: 900px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  gap: 3rem;
+}
+
+.container-login-titulos{
+  display: flex;
+  gap: 3rem;
+
+}
+
+.login-titulos{
+  font-size: 2rem;cursor: pointer;
+  
+}
+
+.titulo-activo{
+  text-decoration: var(--brown-light) underline;
+ 
+}

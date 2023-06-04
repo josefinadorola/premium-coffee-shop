@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="shortcut icon"
       href="./assets/img/logo.png"
@@ -19,16 +20,54 @@
   </head>
   <body>
     <header>
-      <a href="../index.html"><< VOLVER</a>
-      <div class="back-menu" id="back-menu"></div>
-      <a href="../index.html"
+   <a href="../index.html">VOLVER</a>
+    
     </header>
+
+      <section class="section-login">
+        <div class="container-login">
+          <div class="container-login-titulos">
+            <h2 class="login-titulos" id="login">LOGIN</h2>
+            <h2 class="login-titulos" id="registro">REGISTRO</h2>
+          </div>
+                     <form class="formulario form-login">
+            <div class="input-nombre-wrapped">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                id="nombre"
+                required
+                placeholder="Nombre completo"
+              />
+            </div>
+            <div class="input-email-wrapped">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" required placeholder="E-mail" />
+            </div>
+            <div class="textarea-wrapped">
+              <i class="fa-solid fa-message"></i>
+              <textarea
+                name="mensaje"
+                id=""
+                cols="30"
+                rows="10"
+                required
+                placeholder="Escribe tu consulta..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">ENVIAR</button>
+          </form>
+        </div>
+       
+      </section>
+
 
     <script
       src="https://kit.fontawesome.com/22c08125c6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/array.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="./js/array.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
