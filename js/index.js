@@ -1,4 +1,5 @@
 const containerShopCards = document.querySelector("#container-shop-cards");
+const Card = document.querySelector(".card");
 const botonesCategorias = document.querySelectorAll(".shop-categorias");
 const toggleMenu = document.querySelector("#toggle-menu");
 const cart = document.querySelector("#cart");
@@ -13,16 +14,16 @@ const cargarProductos = (productos) => {
   productos.forEach((producto) => {
     const { id, nombre, categoria, precio, imagen } = producto;
 
-    const div = document.createElement("div");
-    div.classList.add("card-shop");
-    div.innerHTML += `
+    const card = document.createElement("div");
+    card.classList.add("card-shop");
+    card.innerHTML += `
                     <img src="${imagen}" alt="capsula" alt="${nombre}"/>
                     <p>${nombre}</p>
                     <p>$${precio}</p>
                     <button id="${id}">COMPRAR</button>
 
                `;
-    containerShopCards.append(div);
+    containerShopCards.appendChild(card);
   });
 };
 
