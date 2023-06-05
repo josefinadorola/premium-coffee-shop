@@ -30,6 +30,10 @@
     display: none;
   }
 
+  .formulario {
+    width: 100%;
+  }
+
   .item-datos-footer {
     width: 10rem;
   }
@@ -159,9 +163,6 @@
     width: 95%;
   }
 
-  .formulario {
-    width: 100%;
-  }
 
   .redes a {
     font-size: 1.8rem;
