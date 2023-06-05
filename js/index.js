@@ -7,6 +7,8 @@ const nav = document.querySelector("#nav");
 const closeMenu = document.querySelector("#close-menu");
 const backMenu = document.querySelector("#back-menu");
 
+let carrito = [];
+
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
@@ -27,18 +29,8 @@ const cargarProductos = (productos) => {
   });
 };
 
-const mostrarMenu = () => {
-  nav.classList.add("visible");
-  backMenu.style.display = "block";
-};
 
-const cerrarrMenu = () => {
-  nav.classList.remove("visible");
-  backMenu.style.display = "none";
-};
-
-const init = () => {
-  cargarProductos(productos);
+const filtroCategorias = () => {
 
   botonesCategorias.forEach((boton) => {
     boton.addEventListener("click", (e) => {
@@ -55,6 +47,37 @@ const init = () => {
       }
     });
   });
+
+}
+
+const cargarCarrito = () =>{
+
+  productos.forEach((producto) => {
+    
+  });
+
+
+
+}
+
+
+
+const mostrarMenu = () => {
+  nav.classList.add("visible");
+  backMenu.style.display = "block";
+};
+
+const cerrarrMenu = () => {
+  nav.classList.remove("visible");
+  backMenu.style.display = "none";
+};
+
+const init = () => {
+  cargarProductos(productos);
+  
+  filtroCategorias();
+
+
 
   toggleMenu.addEventListener("click", mostrarMenu);
 
