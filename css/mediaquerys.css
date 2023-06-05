@@ -96,6 +96,10 @@
     height: 60px;
   }
 
+  .logo-login{
+    margin-left: 0.5rem;
+  }
+
   .iconos-header {
     width: 25px;
     height: 25px;
