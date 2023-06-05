@@ -197,4 +197,22 @@
   .item-datos-footer p {
     font-size: 0.9rem;
   }
-}
+
+
+  .container-login {
+    padding: 2rem;
+
+  }
+
+  .login-register p{
+    font-size: 0.6rem;
+    } 
+   
+    .login-register{
+      margin-top: 0.5rem;
+    }
+ 
+   } 
+
+
+

@@ -20,40 +20,41 @@
   </head>
   <body>
     <header>
-      <a href="../index.html">VOLVER</a>
+      <a href="../index.html"><img src="../assets/img/logo.png" alt="logo" class="logo"></a>
     </header>
 
  <main class="section-login">
   <div class="container-login">
     <h2 class="login-titulos" id="login">LOGIN</h2>
     <form class="formulario form-login">
-      <div class="input-nombre-wrapped">
-        <i class="fa-solid fa-user"></i>
-        <input
-          type="text"
-          id="nombre"
-          required
-          placeholder="Nombre completo"
-        />
+      <div class="login-datos">
+        <label for="correo">E-MAIL</label>
+        <div class="input-container">
+          <i class="fa-solid fa-user"></i>
+          <input
+            type="email"
+            id="correo"
+            required
+            placeholder="josefinad@gmail.com"
+          />
+        </div>
       </div>
-      <div class="input-email-wrapped">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" id="email" required placeholder="E-mail" />
+      <div class="login-datos">
+        <label for="password">CONTRASEÑA</label>
+        <div class="input-container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="password" required placeholder="**********" />
+        </div>
+        
       </div>
-      <div class="textarea-wrapped">
-        <i class="fa-solid fa-message"></i>
-        <textarea
-          name="mensaje"
-          id=""
-          cols="30"
-          rows="10"
-          required
-          placeholder="Escribe tu consulta..."
-        ></textarea>
-      </div>
+      
 
-      <button type="submit" class="btn">ENVIAR</button>
+      <button type="submit" class="btn">INICIAR SESIÓN</button>
     </form>
+
+    <div class="login-register">
+      <p>¿No tenés cuenta aún? <a href="./registro.html">Crear cuenta</a></p>
+    </div>
  </main>
      
    
