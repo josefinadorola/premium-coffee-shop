@@ -18,8 +18,8 @@ const cargarProductos = (productos) => {
     card.classList.add("card-shop");
     card.innerHTML += `
                     <img src="${imagen}" alt="capsula" alt="${nombre}"/>
-                    <p>${nombre}</p>
-                    <p>$${precio}</p>
+                    <p class="card-titulo">${nombre}</p>
+                    <p class="card-precio">$${precio}</p>
                     <button id="${id}">COMPRAR</button>
 
                `;
