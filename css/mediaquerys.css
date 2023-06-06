@@ -47,7 +47,7 @@
     font-size: 0.7rem;
   }
 
-  .botones-carrito {
+  .botones-carrito-container {
     flex-direction: column;
     gap: 1rem;
     align-items: end;
@@ -253,13 +253,7 @@
     margin: 0 auto;
   }
 
-  .botones-carrito a,
-  .botones-carrito button,
-  .vaciar-carrito {
-    width: 220px;
-  }
-
-  .botones-carrito {
+  .botones-carrito-container {
     align-items: center;
     flex-direction: column-reverse;
   }

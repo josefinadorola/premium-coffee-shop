@@ -6,15 +6,15 @@ const cart = document.querySelector("#cart");
 const nav = document.querySelector("#nav");
 const closeMenu = document.querySelector("#close-menu");
 const backMenu = document.querySelector("#back-menu");
+let botonesAgregar = document.querySelectorAll(".boton-comprar");
 
-let carrito = [];
-
+const carrito = [];
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
 
   productos.forEach((producto) => {
-    const { id, nombre, categoria, precio, imagen } = producto;
+    const { id, nombre, precio, imagen } = producto;
 
     const card = document.createElement("div");
     card.classList.add("card-shop");
@@ -22,16 +22,15 @@ const cargarProductos = (productos) => {
                     <img src="${imagen}" alt="capsula" alt="${nombre}"/>
                     <p class="card-titulo">${nombre}</p>
                     <p class="card-precio">$${precio}</p>
-                    <button id="${id}">COMPRAR</button>
+                    <button class="boton-comprar" id="${id}">COMPRAR</button>
 
                `;
     containerShopCards.appendChild(card);
   });
+  actualizarBotonesAgregar();
 };
 
-
 const filtroCategorias = () => {
-
   botonesCategorias.forEach((boton) => {
     boton.addEventListener("click", (e) => {
       botonesCategorias.forEach((boton) => boton.classList.remove("active"));
@@ -47,20 +46,25 @@ const filtroCategorias = () => {
       }
     });
   });
+};
 
-}
+const actualizarBotonesAgregar = () => {
+  botonesAgregar = document.querySelectorAll(".boton-comprar");
 
-const cargarCarrito = () =>{
-
-  productos.forEach((producto) => {
-    
+  botonesAgregar.forEach((boton) => {
+    boton.addEventListener("click", agregarCarrito);
   });
+};
 
+const agregarCarrito = (e) => {
+  const idComprar = e.currentTarget.id;
 
-
-}
-
-
+  const productoAgregado = productos.find(
+    (producto) => producto.id == idComprar
+  );
+  carrito.push(productoAgregado);
+  console.log(carrito);
+};
 
 const mostrarMenu = () => {
   nav.classList.add("visible");
@@ -74,19 +78,13 @@ const cerrarrMenu = () => {
 
 const init = () => {
   cargarProductos(productos);
-  
   filtroCategorias();
-
-
 
   toggleMenu.addEventListener("click", mostrarMenu);
 
   closeMenu.addEventListener("click", cerrarrMenu);
   backMenu.addEventListener("click", cerrarrMenu);
   nav.addEventListener("click", cerrarrMenu);
-
-  
-
 };
 
 init();
