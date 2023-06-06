@@ -57,12 +57,22 @@ const actualizarBotonesAgregar = () => {
 };
 
 const agregarCarrito = (e) => {
-  const idComprar = e.currentTarget.id;
+  const idBotonComprar = e.currentTarget.id;
 
   const productoAgregado = productos.find(
-    (producto) => producto.id == idComprar
+    (producto) => producto.id == idBotonComprar
   );
-  carrito.push(productoAgregado);
+
+  if (carrito.some((producto) => producto.id == idBotonComprar)) {
+    const index = carrito.findIndex(
+      (producto) => producto.id == idBotonComprar
+    );
+    carrito[index].cantidad++;
+  } else {
+    productoAgregado.cantidad = 1;
+    carrito.push(productoAgregado);
+  }
+
   console.log(carrito);
 };
 
