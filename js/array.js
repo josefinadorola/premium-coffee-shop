@@ -4,7 +4,7 @@ const productos = [
     nombre: "Arabica",
     categoria: "capsulas",
     precio: 1700,
-    imagen: "./assets/img/1.png",
+    imagen: "../assets/img/1.png",
   },
 
   {
@@ -12,7 +12,7 @@ const productos = [
     nombre: "Colombia",
     categoria: "capsulas",
     precio: 1500,
-    imagen: "./assets/img/2.png",
+    imagen: "../assets/img/2.png",
   },
 
   {
@@ -20,7 +20,7 @@ const productos = [
     nombre: "Venecia",
     categoria: "capsulas",
     precio: 1800,
-    imagen: "./assets/img/3.png",
+    imagen: "../assets/img/3.png",
   },
 
   {
@@ -28,7 +28,7 @@ const productos = [
     nombre: "Napoles",
     categoria: "capsulas",
     precio: 1800,
-    imagen: "./assets/img/4.png",
+    imagen: "../assets/img/4.png",
   },
 
   {
@@ -36,14 +36,14 @@ const productos = [
     nombre: "Brasil",
     categoria: "capsulas",
     precio: 1500,
-    imagen: "./assets/img/5.png",
+    imagen: "../assets/img/5.png",
   },
   {
     id: 6,
     nombre: "Kenia",
     categoria: "capsulas",
     precio: 1600,
-    imagen: "./assets/img/6.png",
+    imagen: "../assets/img/6.png",
   },
 
   {
@@ -51,7 +51,7 @@ const productos = [
     nombre: "Arabica",
     categoria: "molido",
     precio: 1300,
-    imagen: "./assets/img/7.png",
+    imagen: "../assets/img/7.png",
   },
 
   {
@@ -59,7 +59,7 @@ const productos = [
     nombre: "Brasil",
     categoria: "molido",
     precio: 1250,
-    imagen: "./assets/img/8.png",
+    imagen: "../assets/img/8.png",
   },
 
   {
@@ -67,7 +67,7 @@ const productos = [
     nombre: "Colombia",
     categoria: "molido",
     precio: 1100,
-    imagen: "./assets/img/9.png",
+    imagen: "../assets/img/9.png",
   },
 
   {
@@ -75,14 +75,14 @@ const productos = [
     nombre: "Kenia",
     categoria: "molido",
     precio: 1200,
-    imagen: "./assets/img/10.png",
+    imagen: "../assets/img/10.png",
   },
   {
     id: 11,
     nombre: "Italia",
     categoria: "molido",
     precio: 1500,
-    imagen: "./assets/img/11.png",
+    imagen: "../assets/img/11.png",
   },
 
   {
@@ -90,7 +90,7 @@ const productos = [
     nombre: "Cafetera para capsulas",
     categoria: "accesorios",
     precio: 40000,
-    imagen: "./assets/img/12.png",
+    imagen: "../assets/img/12.png",
   },
 
   {
@@ -98,7 +98,7 @@ const productos = [
     nombre: "Cafetera italiana",
     categoria: "accesorios",
     precio: 25000,
-    imagen: "./assets/img/13.png",
+    imagen: "../assets/img/13.png",
   },
 
   {
@@ -106,7 +106,7 @@ const productos = [
     nombre: "Cafetera francesa",
     categoria: "accesorios",
     precio: 12000,
-    imagen: "./assets/img/14.png",
+    imagen: "../assets/img/14.png",
   },
 
   {
@@ -114,6 +114,6 @@ const productos = [
     nombre: "Cafetera de filtro",
     categoria: "accesorios",
     precio: 20000,
-    imagen: "./assets/img/15.png",
+    imagen: "../assets/img/15.png",
   },
 ];

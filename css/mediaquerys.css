@@ -111,9 +111,20 @@
     margin-left: 0.5rem;
   }
 
+  .container-iconos {
+    gap: 1rem;
+    margin-right: 10px;
+  }
+
   .iconos-header {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .numerito {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    right: -12px;
   }
 
   .nav {

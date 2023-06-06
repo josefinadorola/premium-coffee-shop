@@ -7,8 +7,17 @@ const nav = document.querySelector("#nav");
 const closeMenu = document.querySelector("#close-menu");
 const backMenu = document.querySelector("#back-menu");
 let botonesAgregar = document.querySelectorAll(".boton-comprar");
+const numerito = document.querySelector("#numerito");
 
-const carrito = [];
+let carrito;
+const carritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
+
+if (carritoLS) {
+  carrito = carritoLS;
+  actualizarNumerito();
+} else {
+  carrito = [];
+}
 
 const cargarProductos = (productos) => {
   containerShopCards.innerHTML = "";
@@ -19,7 +28,7 @@ const cargarProductos = (productos) => {
     const card = document.createElement("div");
     card.classList.add("card-shop");
     card.innerHTML += `
-                    <img src="${imagen}" alt="capsula" alt="${nombre}"/>
+                    <img src="${imagen}" alt="${nombre}"/>
                     <p class="card-titulo">${nombre}</p>
                     <p class="card-precio">$${precio}</p>
                     <button class="boton-comprar" id="${id}">COMPRAR</button>
@@ -73,8 +82,18 @@ const agregarCarrito = (e) => {
     carrito.push(productoAgregado);
   }
 
-  console.log(carrito);
+  actualizarNumerito();
+
+  localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 };
+
+function actualizarNumerito() {
+  let nuevoNumerito = carrito.reduce(
+    (acc, producto) => acc + producto.cantidad,
+    0
+  );
+  numerito.innerHTML = nuevoNumerito;
+}
 
 const mostrarMenu = () => {
   nav.classList.add("visible");

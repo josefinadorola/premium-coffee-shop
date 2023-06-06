@@ -7,7 +7,7 @@
 
     <link
       rel="shortcut icon"
-      href="./assets/img/logo.png"
+      href="../assets/img/logo.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="../css/styles.css" />
@@ -26,84 +26,45 @@
     </header>
 
     <main class="main-carrito">
-      <div class="container-carrito">
-        <h1>CARRITO DE COMPRAS</h1>
+      <h1>CARRITO DE COMPRAS</h1>
 
-        <p class="carrito-vacio">Tu carrito está vacío</p>
-        <div class="carrito">
-          <div class="carrito-items">
-            <div class="item">
-              <img src="../assets/img/2.png" alt="carrito" />
-              <div class="item-datos">
-                <p>Capsula Kenia</p>
-                <p>$2.500</p>
-              </div>
-              <div class="item-cantidad">
-                <p>Cantidad</p>
-                <p>1</p>
-              </div>
-              <div class="item-subtotal">
-                <p>Subtotal</p>
-                <p>$5.000</p>
-              </div>
-              <i class="fa-solid fa-trash"></i>
-            </div>
+      <p class="carrito-vacio" id="carrito-vacio">Tu carrito está vacío</p>
+      <div class="container-carrito disabled">
+        <div class="carrito-items" id="carrito-items">
+          <!-- CARGADO POR JS    -->
+        </div>
 
-            <div class="item">
-              <img src="../assets/img/2.png" alt="carrito" />
-              <div class="item-datos">
-                <p>Capsula Kenia</p>
-                <p>$2.500</p>
-              </div>
-              <div class="item-cantidad">
-                <p>Cantidad</p>
-                <p>1</p>
-              </div>
-              <div class="item-subtotal">
-                <p>Subtotal</p>
-                <p>$5.000</p>
-              </div>
-              <i class="fa-solid fa-trash"></i>
+        <div class="calculo">
+          <div class="calculo-subtotal">
+            <div class="subtotal">
+              <p>Subtotal:</p>
+              <p>$2.500</p>
             </div>
-            <div class="vaciar-carrito-container">
-              <button class="vaciar-carrito botones-carrito">
-                VACIAR CARRITO
-              </button>
+            <div class="envio">
+              <p>Envío:</p>
+              <p>$1.500</p>
             </div>
           </div>
 
-          <div class="calculo">
-            <div class="calculo-subtotal">
-              <div class="subtotal">
-                <p>Subtotal:</p>
-                <p>$2.500</p>
-              </div>
-              <div class="envio">
-                <p>Envío:</p>
-                <p>$1.500</p>
-              </div>
-            </div>
-
-            <div class="calculo-total">
-              <p>Total:</p>
-              <p>$2500</p>
-            </div>
-            <div class="botones-carrito-container">
-              <a href="../index.html" class="botones-carrito"
-                >SEGUIR COMPRANDO</a
-              >
-              <button class="botones-carrito">INICIAR COMPRA</button>
-            </div>
+          <div class="calculo-total">
+            <p>Total:</p>
+            <p>$2500</p>
+          </div>
+          <div class="botones-carrito-container">
+            <a href="../index.html" class="botones-carrito">SEGUIR COMPRANDO</a>
+            <button class="botones-carrito">INICIAR COMPRA</button>
           </div>
         </div>
       </div>
+      <p class="carrito-comprado disabled" id="carrito-comprado">
+        Muchas gracias por tu compra
+      </p>
     </main>
 
     <script
       src="https://kit.fontawesome.com/22c08125c6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/array.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/carrito.js"></script>
   </body>
 </html>

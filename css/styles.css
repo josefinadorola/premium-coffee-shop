@@ -77,6 +77,7 @@ header {
 }
 
 .container-iconos {
+  position: relative;
   display: flex;
   gap: 1.5rem;
 }
@@ -85,6 +86,16 @@ header {
   width: 28px;
   height: 28px;
   cursor: pointer;
+}
+
+.numerito {
+  border-radius: 50%;
+  background-color: #8d734a;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  font-size: 0.7rem;
 }
 
 .iconos-footer {
@@ -597,8 +608,9 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
   padding: 5rem;
+  gap: 2rem;
 }
 
 .container-carrito {
@@ -610,18 +622,8 @@ textarea:focus {
   padding: 2rem;
 }
 
-.container-carrito h1 {
+.main-carrito h1 {
   color: var(--color-font);
-}
-
-.carrito-vacio {
-  display: none;
-}
-
-.carrito {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
 }
 
 .carrito-items {
@@ -711,4 +713,8 @@ textarea:focus {
 .calculo-total {
   display: flex;
   justify-content: space-between;
+}
+
+.disabled {
+  display: none;
 }
