@@ -114,9 +114,6 @@ const init = () => {
   closeMenu.addEventListener("click", cerrarrMenu);
   backMenu.addEventListener("click", cerrarrMenu);
   nav.addEventListener("click", cerrarrMenu);
-
-  vaciarCarritoBoton.addEventListener("click", vaciarCarrito);
-  comprarCarritoBoton.addEventListener("click", comprarCarrito);
 };
 
 init();
