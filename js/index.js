@@ -31,7 +31,7 @@ const cargarProductos = (productos) => {
                     <img src="${imagen}" alt="${nombre}"/>
                     <p class="card-titulo">${nombre}</p>
                     <p class="card-precio">$${precio}</p>
-                    <button class="boton-comprar" id="${id}">COMPRAR</button>
+                    <button class="boton-comprar" id="${id}"><i class="fa-solid fa-cart-plus"></i></button>
 
                `;
     containerShopCards.appendChild(card);
