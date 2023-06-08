@@ -6,6 +6,9 @@ const carritoComprado = document.querySelector("#carrito-comprado");
 const itemsCarrito = document.querySelector("#carrito-items");
 const containerCarrito = document.querySelector(".container-carrito");
 let botonesEliminar = document.querySelectorAll(".boton-eliminar");
+const vaciarCarritoBoton = document.querySelector("#vaciar-carrito");
+const comprarCarritoBoton = document.querySelector("#comprar-carrito");
+const totalCarrito = document.querySelector("#total-carrito");
 
 function cargarProductosCarrito() {
   if (carrito && carrito.length > 0) {
@@ -32,7 +35,7 @@ function cargarProductosCarrito() {
               </div>
               <div class="item-subtotal">
                 <p>Subtotal</p>
-                <p>${precio * cantidad}</p>
+                <p id="calculo-subtotal">${precio * cantidad}</p>
               </div>
               <button class="boton-eliminar" id="${id}"><i class="fa-solid fa-trash"></i></button>
       `;
@@ -45,6 +48,7 @@ function cargarProductosCarrito() {
     carritoComprado.classList.add("disabled");
   }
   actualizarBotonesEliminar();
+  actualizarTotal();
 }
 
 cargarProductosCarrito();
@@ -68,3 +72,29 @@ function eliminarDelCarrito(e) {
 
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 }
+
+function vaciarCarrito() {
+  carrito.length = 0;
+  localStorage.setItem("productos-carrito", JSON.stringify(carrito));
+  cargarProductosCarrito();
+}
+
+function actualizarTotal() {
+  const calculoTotal = carrito.reduce(
+    (acc, producto) => acc + producto.precio * producto.cantidad,
+    0
+  );
+  totalCarrito.innerText = `$${calculoTotal}`;
+}
+
+function comprarCarrito() {
+  carrito.length = 0;
+  localStorage.setItem("productos-carrito", JSON.stringify(carrito));
+
+  carritoVacio.classList.add("disabled");
+  containerCarrito.classList.add("disabled");
+  carritoComprado.classList.remove("disabled");
+}
+
+vaciarCarritoBoton.addEventListener("click", vaciarCarrito);
+comprarCarritoBoton.addEventListener("click", comprarCarrito);

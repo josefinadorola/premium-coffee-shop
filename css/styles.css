@@ -667,13 +667,6 @@ textarea:focus {
   color: var(--color-font);
 }
 
-.calculo {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  font-weight: 300;
-}
-
 .botones-carrito-container {
   display: flex;
   justify-content: space-between;
@@ -704,20 +697,13 @@ textarea:focus {
   justify-content: end;
 }
 
-.calculo-subtotal {
-  padding: 2rem 0;
-  border-top: 1px solid var(--precio);
-  border-bottom: 1px solid var(--precio);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.subtotal,
-.envio,
 .calculo-total {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid var(--precio);
+  border-bottom: 1px solid var(--precio);
+  gap: 1rem;
 }
 
 .disabled {

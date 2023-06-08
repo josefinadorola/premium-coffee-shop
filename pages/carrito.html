@@ -33,29 +33,24 @@
         <div class="carrito-items" id="carrito-items">
           <!-- CARGADO POR JS    -->
         </div>
+        <div class="vaciar-carrito-container">
+          <button class="botones-carrito" id="vaciar-carrito">
+            VACIAR CARRITO
+          </button>
+        </div>
 
-        <div class="calculo">
-          <div class="calculo-subtotal">
-            <div class="subtotal">
-              <p>Subtotal:</p>
-              <p>$2.500</p>
-            </div>
-            <div class="envio">
-              <p>Envío:</p>
-              <p>$1.500</p>
-            </div>
-          </div>
-
-          <div class="calculo-total">
-            <p>Total:</p>
-            <p>$2500</p>
-          </div>
-          <div class="botones-carrito-container">
-            <a href="../index.html" class="botones-carrito">SEGUIR COMPRANDO</a>
-            <button class="botones-carrito">INICIAR COMPRA</button>
-          </div>
+        <div class="calculo-total">
+          <p>Total:</p>
+          <p id="total-carrito">$2500</p>
+        </div>
+        <div class="botones-carrito-container">
+          <a href="../index.html" class="botones-carrito">SEGUIR COMPRANDO</a>
+          <button class="botones-carrito" id="comprar-carrito">
+            INICIAR COMPRA
+          </button>
         </div>
       </div>
+
       <p class="carrito-comprado disabled" id="carrito-comprado">
         Muchas gracias por tu compra
       </p>
