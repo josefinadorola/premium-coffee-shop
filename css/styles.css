@@ -626,6 +626,12 @@ textarea:focus {
   color: var(--color-font);
 }
 
+.carrito-vacio i,
+.carrito-comprado i {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
 .carrito-items {
   display: flex;
   flex-direction: column;
