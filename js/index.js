@@ -10,10 +10,10 @@ let botonesAgregar = document.querySelectorAll(".boton-comprar");
 const numerito = document.querySelector("#numerito");
 
 let carrito;
-const carritoLS = JSON.parse(localStorage.getItem("productos-carrito"));
+let carritoLS = localStorage.getItem("productos-carrito");
 
 if (carritoLS) {
-  carrito = carritoLS;
+  carrito = JSON.parse(carritoLS);
   actualizarNumerito();
 } else {
   carrito = [];
