@@ -657,9 +657,14 @@ textarea:focus {
   height: 55px;
 }
 
-.item i {
-  color: var(--color-font);
+.boton-eliminar {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+}
+
+.boton-eliminar i {
+  color: var(--color-font);
 }
 
 .calculo {
