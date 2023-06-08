@@ -57,6 +57,12 @@ function actualizarBotonesEliminar() {
 }
 
 function eliminarDelCarrito(e) {
-  let idBotonEliminar = e.currentTarget.id;
-  console.log(idBotonEliminar);
+  const idBotonEliminar = e.currentTarget.id;
+
+  const index = carrito.findIndex(
+    (producto) => producto.id === idBotonEliminar
+  );
+  console.log(carrito);
+  carrito.splice(index, 1);
+  console.log(carrito);
 }
