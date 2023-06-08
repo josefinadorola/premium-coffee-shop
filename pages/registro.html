@@ -26,7 +26,7 @@
  <main class="main-login">
   <div class="container-login">
     <h2 class="login-titulos" id="login">REGISTRO</h2>
-    <form class="formulario form-login">
+    <form class="formulario form-login" id="form-registro">
       <div class="login-datos">
         <label for="nombre">NOMBRE</label>
         <div class="input-container">
@@ -39,12 +39,12 @@
           />
         </div>
         <div class="login-datos">
-            <label for="correo">E-MAIL</label>
+            <label for="correo-registro">E-MAIL</label>
             <div class="input-container">
               <i class="fa-solid fa-envelope"></i>
               <input
                 type="email"
-                id="correo"
+                id="correo-registro"
                 required
                 placeholder="josefinad@gmail.com"
               />
@@ -62,16 +62,16 @@
                 </div>
       </div>
       <div class="login-datos">
-        <label for="password">CONTRASEÑA</label>
+        <label for="password-registro">CONTRASEÑA</label>
         <div class="input-container">
           <i class="fa-solid fa-lock"></i>
-          <input type="email" id="password" required placeholder="**********" />
+          <input type="password" id="password-registro" required placeholder="**********" />
         </div>
         
       </div>
       
 
-      <button type="submit" class="btn">REGISTRATE</button>
+      <button class="btn" id="boton-registro">REGISTRATE</button>
     </form>
 
     <div class="login-register">
@@ -85,7 +85,6 @@
       src="https://kit.fontawesome.com/22c08125c6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/array.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/formularios.js"></script>
   </body>
 </html>

@@ -26,14 +26,14 @@
  <main class="main-login">
   <div class="container-login">
     <h2 class="login-titulos" id="login">LOGIN</h2>
-    <form class="formulario form-login">
+    <form class="formulario form-login" id="form-login">
       <div class="login-datos">
-        <label for="correo">E-MAIL</label>
+        <label for="correo-login">E-MAIL</label>
         <div class="input-container">
           <i class="fa-solid fa-user"></i>
           <input
             type="email"
-            id="correo"
+            id="correo-login"
             required
             placeholder="josefinad@gmail.com"
           />
@@ -43,13 +43,13 @@
         <label for="password">CONTRASEÑA</label>
         <div class="input-container">
           <i class="fa-solid fa-lock"></i>
-          <input type="email" id="password" required placeholder="**********" />
+          <input type="password" id="password-login" required placeholder="**********" />
         </div>
         
       </div>
       
 
-      <button type="submit" class="btn">INICIAR SESIÓN</button>
+      <button class="btn" id="boton-login">INICIAR SESIÓN</button>
     </form>
 
     <div class="login-register">
@@ -63,7 +63,6 @@
       src="https://kit.fontawesome.com/22c08125c6.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/array.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="../js/formularios.js"></script>
   </body>
 </html>
