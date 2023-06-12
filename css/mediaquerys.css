@@ -1,4 +1,4 @@
-@import url(./styles.css);
+@import url(../css/styles.css);
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -92,6 +92,11 @@
   .main-carrito {
     padding: 0.5rem;
     margin-top: 100px;
+  }
+
+  .titulo-carrito{
+    font-size: 1rem;
+    
   }
 }
 
@@ -238,14 +243,20 @@
   }
 
   /*CARRITO*/
-  .container-carrito h1 {
-    text-align: center;
+
+  .container-carrito{
+    padding: 0.5rem;
+    gap: 1rem;
   }
 
+  .container-carrito h4{
+    font-size: 0.8rem;
+  }
+ 
   .item {
-    flex-direction: column;
-    font-size: 1rem;
-    gap: 1rem;
+    padding: 1rem;
+    font-size: 0.6rem;
+    gap: 0.5rem;
   }
 
   .item-datos,
@@ -255,18 +266,32 @@
     gap: 0;
   }
 
+  .item img{
+    width: 50px;
+    height: 50px;
+  }
+
   .item-datos p:first-child,
   .item-cantidad p:first-child,
   .item-subtotal p:first-child {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
-  .vaciar-carrito {
-    margin: 0 auto;
+  .botones-carrito{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 0.6rem;
   }
-
+ 
   .botones-carrito-container {
     align-items: center;
     flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .vaciar-carrito-container{
+    display: flex;
+    justify-content: center;
   }
 }

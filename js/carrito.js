@@ -37,7 +37,7 @@ function cargarProductosCarrito() {
                 <p>Subtotal</p>
                 <p id="calculo-subtotal">${precio * cantidad}</p>
               </div>
-              <button class="boton-eliminar" id="${id}"><i class="fa-solid fa-trash"></i></button>
+              <button class="boton-eliminar" id="${id}"><i class="fa-solid fa-xmark"></i></button>
       `;
 
       itemsCarrito.appendChild(item);
