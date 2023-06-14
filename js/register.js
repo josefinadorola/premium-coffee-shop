@@ -38,5 +38,10 @@ const registro = (e) => {
   }
 };
 
-formRegistro.addEventListener("submit", registro);
 
+
+const init = () =>{
+  formRegistro.addEventListener("submit", registro);
+}
+
+init();
