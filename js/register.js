@@ -1,9 +1,6 @@
 const formRegistro = document.querySelector("#form-registro");
-const formLogin = document.querySelector("#form-login");
-const inputCorreoLogin = document.querySelector("#correo-login");
-const inputContraseñalogin = document.querySelector("#password-login");
 const botonRegistro = document.querySelector("#boton-registro");
-const botonLogin = document.querySelector("#boton-login");
+
 
 const registro = (e) => {
   e.preventDefault();
@@ -11,7 +8,7 @@ const registro = (e) => {
   const inputNombre = document.querySelector("#nombre").value;
   const inputCorreoRegistro = document.querySelector("#correo-registro").value;
   const inputTelefono = document.querySelector("#telefono").value;
-  const inputContraseñaRegistro =
+  const inputPassRegistro =
     document.querySelector("#password-registro").value;
 
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -26,7 +23,7 @@ const registro = (e) => {
       name: inputNombre,
       email: inputCorreoRegistro,
       telefono: inputTelefono,
-      password: inputContraseñaRegistro,
+      password: inputPassRegistro,
     });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     
@@ -37,3 +34,4 @@ const registro = (e) => {
 };
 
 formRegistro.addEventListener("submit", registro);
+
