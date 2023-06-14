@@ -537,6 +537,7 @@ textarea:focus {
   align-items: center;
   margin-top: 100px;
   width: 100%;
+  
 }
 
 /*LOGIN-REGISTRO*/
@@ -602,6 +603,56 @@ textarea:focus {
 .login-register a {
   color: var(--brown-light);
   font-weight: 600;
+}
+
+.body-registro{
+  position: relative;
+}
+
+.registro-realizado-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.registro-realizado{
+  margin-top: 100px;
+  width: 600px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.registro-realizado h3{
+  font-size: 2rem;
+}
+
+.registro-realizado p{
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.registro-realizado i{
+  color: green;
+  font-size: 3rem;
+}
+
+.registro-realizado a{
+  padding: 1rem 2rem;
+  background-color: #8d734a;
+  color: #000;
+  border-radius: 0.2rem;
 }
 
 /*CARRITO*/

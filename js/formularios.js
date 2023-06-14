@@ -29,9 +29,10 @@ const registro = (e) => {
       password: inputContraseñaRegistro,
     });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    alert("Registro exitoso");
-
+    
     //redireccion a login
+    const registroRealizado = document.querySelector("#registro-realizado");
+    registroRealizado.classList.remove("disabled");
   }
 };
 
