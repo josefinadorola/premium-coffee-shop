@@ -656,6 +656,20 @@ textarea:focus {
   font-weight: 600;
 }
 
+/*ERRORES LOGIN/REGISTRO*/
+.show-error,
+.email-registrado {
+color: #d83131;
+font-size: 0.8rem;
+text-align: center;
+}
+
+
+.error-input{
+  border: 1px solid #d83131;
+}
+
+
 /*CARRITO*/
 
 .main-carrito {

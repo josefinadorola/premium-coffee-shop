@@ -17,7 +17,10 @@ const registro = (e) => {
   );
 
   if (usuarioRegistrado) {
-    return alert("El usuario ya esta registrado");
+    const emailRegistrado = document.querySelector(".email-registrado");
+    const imputContainer = document.querySelector("#input-container-correo");
+    emailRegistrado.classList.remove("disabled");
+    imputContainer.classList.add("error-input");
   } else {
     usuarios.push({
       name: inputNombre,

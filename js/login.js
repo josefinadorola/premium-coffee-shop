@@ -11,9 +11,12 @@ const login = (e) => {
     
     const usuarioValido =usuarios.find(usuario => usuario.email === emailLogin && usuario.password === passwordLogin);
     if (!usuarioValido){
-      return alert("Usuario y/o contraseña incorrectos.");
+      //Mostrar error
+      const showError = document.querySelector(".show-error");
+      showError.classList.remove("disabled");
     }
       alert(`Bienvenido ${usuarioValido.name}`);
+      localStorage.setItem('login_success', JSON.stringify(usuarioValido));
       window.location.href= "../index.html";
     
     
