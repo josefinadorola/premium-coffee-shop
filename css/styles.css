@@ -615,7 +615,7 @@ textarea:focus {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #000;
+  background-color: var(--color-primary);
   display: flex;
   justify-content: center;
 }
@@ -624,7 +624,7 @@ textarea:focus {
   margin-top: 100px;
   width: 600px;
   height: 500px;
-  background-color: #ffffff;
+  background-color: var(--color-font);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -640,19 +640,20 @@ textarea:focus {
 
 .registro-realizado p{
   font-size: 0.8rem;
-  color: #000;
+  color: var(--color-primary);
 }
 
 .registro-realizado i{
-  color: green;
-  font-size: 3rem;
+  color: rgb(31, 161, 31);
+  font-size: 4rem;
 }
 
 .registro-realizado a{
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.8rem;
   background-color: #8d734a;
-  color: #000;
+  color: var(--color-primary);
   border-radius: 0.2rem;
+  font-weight: 600;
 }
 
 /*CARRITO*/
