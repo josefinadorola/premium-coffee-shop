@@ -248,16 +248,16 @@
 
   .registro-realizado{
     padding: 1rem;
-    height: 100vh;
-    border-radius: 0;
-
-  }
+    width: 310px;
+  height: 250px;
+   gap: 1rem;
+     }
 
   .registro-realizado h3{
     font-size: 1.2rem;
   }
 
-  .registro-realizado 9{
+  .registro-realizado{
     font-size: 0.6rem;
   }
 
