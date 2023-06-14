@@ -28,7 +28,7 @@
     <h2 class="login-titulos" id="login">REGISTRO</h2>
     <form class="formulario form-login" id="form-registro">
       <div class="login-datos">
-        <label for="nombre">NOMBRE</label>
+        <label for="nombre">NOMBRE Y APELLIDO</label>
         <div class="input-container">
           <i class="fa-solid fa-user"></i>
           <input
@@ -38,6 +38,7 @@
             placeholder="Josefina Dorola"
           />
         </div>
+        <p class="show-error disabled" id="nombre-vacio">El nombre es obligatorio</p>
         <div class="login-datos">
             <label for="correo-registro">E-MAIL</label>
             <div class="input-container" id="input-container-correo">
@@ -49,18 +50,20 @@
                 placeholder="josefinad@gmail.com"
                               />
             </div>
-            <p class="email-registrado disabled">El correo ya se encuentra registrado.</p>
+            <p class="show-error disabled" id="correo-vacio">El correo es obligatorio</p>
+            <p class="show-error disabled" id="email-registrado">El correo ya se encuentra registrado.</p>
             <div class="login-datos">
                 <label for="telefono">TELÉFONO</label>
                 <div class="input-container">
                   <i class="fa-solid fa-phone"></i>
                   <input
-                    type="tel"
+                    type="number"
                     id="telefono"
                     required
                     placeholder="1123890563"
                   />
                 </div>
+                <p class="show-error disabled" id="tel-vacio">El teléfono es obligatorio</p>
       </div>
       <div class="login-datos">
         <label for="password-registro">CONTRASEÑA</label>
@@ -68,8 +71,11 @@
           <i class="fa-solid fa-lock"></i>
           <input type="password" id="password-registro" required placeholder="**********" />
         </div>
+        <p class="show-error disabled" id="pass-vacio">La contraseña es obligatoria</p>
         
       </div>
+
+
       
 
       <button class="btn" id="boton-registro">REGISTRATE</button>

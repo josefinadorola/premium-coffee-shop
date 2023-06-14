@@ -11,13 +11,15 @@ const registro = (e) => {
   const inputPassRegistro =
     document.querySelector("#password-registro").value;
 
+  
+
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const usuarioRegistrado = usuarios.find(
     (usuario) => usuario.email === inputCorreoRegistro
   );
 
   if (usuarioRegistrado) {
-    const emailRegistrado = document.querySelector(".email-registrado");
+    const emailRegistrado = document.querySelector("#email-registrado");
     const imputContainer = document.querySelector("#input-container-correo");
     emailRegistrado.classList.remove("disabled");
     imputContainer.classList.add("error-input");

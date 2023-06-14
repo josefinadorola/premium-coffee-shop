@@ -657,8 +657,7 @@ textarea:focus {
 }
 
 /*ERRORES LOGIN/REGISTRO*/
-.show-error,
-.email-registrado {
+.show-error {
 color: #d83131;
 font-size: 0.8rem;
 text-align: center;
