@@ -98,12 +98,6 @@ header {
   font-size: 0.6rem;
 }
 
-.iconos-footer {
-  width: 50px;
-  height: 48px;
-  transform: 0.5s;
-}
-
 .close-menu {
   margin: 2rem;
 }
@@ -504,6 +498,12 @@ textarea:focus {
   color: var(--color-font);
 }
 
+.iconos-footer {
+  width: 50px;
+  height: 47px;
+  transform: 0.5s;
+}
+
 .item-datos-footer h4 {
   font-size: 1rem;
   padding: 1rem 0;
@@ -537,7 +537,6 @@ textarea:focus {
   align-items: center;
   margin-top: 100px;
   width: 100%;
-  
 }
 
 /*LOGIN-REGISTRO*/
@@ -605,11 +604,11 @@ textarea:focus {
   font-weight: 600;
 }
 
-.body-registro{
+.body-registro {
   position: relative;
 }
 
-.registro-realizado-container{
+.registro-realizado-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -620,7 +619,7 @@ textarea:focus {
   justify-content: center;
 }
 
-.registro-realizado{
+.registro-realizado {
   margin-top: 100px;
   width: 600px;
   height: 500px;
@@ -634,21 +633,21 @@ textarea:focus {
   padding: 3rem;
 }
 
-.registro-realizado h3{
+.registro-realizado h3 {
   font-size: 2rem;
 }
 
-.registro-realizado p{
+.registro-realizado p {
   font-size: 0.8rem;
   color: var(--color-primary);
 }
 
-.registro-realizado i{
+.registro-realizado i {
   color: rgb(31, 161, 31);
   font-size: 4rem;
 }
 
-.registro-realizado a{
+.registro-realizado a {
   padding: 0.8rem 1.8rem;
   background-color: #8d734a;
   color: var(--color-primary);
@@ -658,16 +657,14 @@ textarea:focus {
 
 /*ERRORES LOGIN/REGISTRO*/
 .show-error {
-color: #d83131;
-font-size: 0.8rem;
-text-align: center;
+  color: #d83131;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
-
-.error-input{
+.error-input {
   border: 1px solid #d83131;
 }
-
 
 /*CARRITO*/
 
@@ -690,7 +687,7 @@ text-align: center;
   padding: 2rem;
 }
 
-.container-carrito h4{
+.container-carrito h4 {
   color: var(--color-font);
 }
 
@@ -707,7 +704,6 @@ text-align: center;
 .carrito-items {
   display: flex;
   flex-direction: column;
-  
 }
 
 .item {
@@ -720,10 +716,9 @@ text-align: center;
   font-weight: 300;
   font-size: 0.8rem;
   border-top: 1px solid var(--precio);
- 
 }
 
-.item:last-child{
+.item:last-child {
   border-bottom: 1px solid var(--precio);
 }
 

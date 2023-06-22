@@ -83,6 +83,7 @@ const agregarCarrito = (e) => {
   }
 
   actualizarNumerito();
+  alert(`El artículo ${productoAgregado.nombre} ha sido agregado al carrito.`);
 
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 };
