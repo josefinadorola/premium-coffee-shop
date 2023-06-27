@@ -10,30 +10,78 @@ const inputs = document.querySelectorAll("#form-registro input");
 /*EXPRESIONES REGULARES*/ 
 
 const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ\s]{3,40}$/, // Letras y espacios, pueden llevar acentos.
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-	password: /^.{4,12}$/ // 4 a 12 digitos.
+	password: /^.{8,12}$/ // 4 a 12 digitos.
 
 }
 
-const validarInputs = () => {
- console.log("funciona");
+// const validarInputs = () => {
+//  console.log("funciona");
+// }
+
+
+// inputs.forEach((input) => {
+//   input.addEventListener('keyup', validarInputs);
+//   input.addEventListener('blur', validarInputs);
+// });
+
+
+const validarNombre = () => {
+  if (expresiones.nombre.test(inputNombre.value)){
+    document.querySelector("#icono-error-nombre").style.visibility=("hidden");
+    document.querySelector("#nombre-vacio").classList.add("disabled")
+    document.querySelector("#icono-validacion-nombre").style.visibility=("visible");
+  }
+  else{ 
+    document.querySelector("#icono-error-nombre").style.visibility=("visible");
+  document.querySelector("#nombre-vacio").classList.remove("disabled")}
+
 }
 
 
-inputs.forEach((input) => {
-  input.addEventListener('keyup', validarInputs);
-  input.addEventListener('blur', validarInputs);
-});
+const validarCorreo = () => {
+  if (expresiones.correo.test(inputCorreoRegistro.value) ){
+    document.querySelector("#icono-error-correo").style.visibility=("hidden");
+    document.querySelector("#correo-vacio").classList.add("disabled")
+    document.querySelector("#icono-validacion-correo").style.visibility=("visible");
+  }
+  else{ 
+    document.querySelector("#icono-error-correo").style.visibility=("visible");
+  document.querySelector("#correo-vacio").classList.remove("disabled")}
 
+}
 
+const validarTelefono = () => {
+  if (expresiones.telefono.test(inputTelefono.value) ){
+    document.querySelector("#icono-error-telefono").style.visibility=("hidden");
+    document.querySelector("#tel-vacio").classList.add("disabled")
+    document.querySelector("#icono-validacion-telefono").style.visibility=("visible");
+  }
+  else{ 
+    document.querySelector("#icono-error-telefono").style.visibility=("visible");
+  document.querySelector("#tel-vacio").classList.remove("disabled")}
+
+}
+
+const validarPassword = () => {
+  if (expresiones.password.test(inputPassRegistro.value) ){
+    document.querySelector("#icono-error-password").style.visibility=("hidden");
+    document.querySelector("#pass-vacio").classList.add("disabled")
+    document.querySelector("#icono-validacion-password").style.visibility=("visible");
+  }
+  else{ 
+    document.querySelector("#icono-error-password").style.visibility=("visible");
+  document.querySelector("#pass-vacio").classList.remove("disabled")}
+
+}
 
 
 const registro = (e) => {
   e.preventDefault();
 
-   
+    
 
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const usuarioRegistrado = usuarios.find(
@@ -61,4 +109,9 @@ const registro = (e) => {
 };
 
 formRegistro.addEventListener("submit", registro);
+
+inputNombre.addEventListener('blur', validarNombre);
+inputCorreoRegistro.addEventListener('blur', validarCorreo);
+inputTelefono.addEventListener('blur', validarTelefono);
+inputPassRegistro.addEventListener('blur', validarPassword);
 

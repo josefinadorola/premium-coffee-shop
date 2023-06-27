@@ -665,7 +665,7 @@ textarea:focus {
 /*ERRORES/VALIDACIONES*/
 .show-error {
   color: #d83131;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
 }
 
