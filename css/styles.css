@@ -663,15 +663,21 @@ textarea:focus {
 }
 
 /*ERRORES/VALIDACIONES*/
-.show-error {
-  color: #d83131;
-  font-size: 0.7rem;
-  text-align: center;
-}
 
-.error-input {
+.login-datos.error input{
   border: 1px solid #d83131;
 }
+
+.login-datos.success input{
+  border: 1px solid #28a745;
+}
+
+.login-datos small{
+  color:  #dc3545;
+  max-width: 350px;
+  text-align: center;
+  display: none;
+  }
 
 .icono-validacion{
   color: green;
@@ -689,6 +695,23 @@ textarea:focus {
   visibility:hidden;
  
 }
+
+.show-error {
+  color: #d83131;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#form-error{
+  color: #dc3545;
+  font-size: 1rem;
+  margin: 8px 0px;
+  max-width: 350px;
+  text-align: center;
+}
+
+
+
 
 /*CARRITO*/
 

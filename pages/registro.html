@@ -40,7 +40,8 @@
           <i class="fa-solid fa-circle-check  icono-validacion" id="icono-validacion-nombre"></i>
           <i class="fa-solid fa-circle-xmark icono-error" id="icono-error-nombre"></i>
         </div>
-        <p class="show-error disabled" id="nombre-vacio">El nombre debe contener entre 3 y 40 dígitos.</p>
+        <small></small>
+      </div>
         <div class="login-datos">
             <label for="correo-registro">E-MAIL</label>
             <div class="input-container" id="input-container-correo">
@@ -53,9 +54,9 @@
                               />
                   <i class="fa-solid fa-circle-check  icono-validacion" id="icono-validacion-correo"></i>
                   <i class="fa-solid fa-circle-xmark icono-error" id="icono-error-correo"></i>
+                  <small></small>
             </div>
-            <p class="show-error disabled" id="correo-vacio">Correo inválido</p>
-            <p class="show-error disabled" id="email-registrado">El correo ya se encuentra registrado.</p>
+            
             <div class="login-datos">
                 <label for="telefono">TELÉFONO</label>
                 <div class="input-container">
@@ -69,7 +70,7 @@
                   <i class="fa-solid fa-circle-check icono-validacion" id="icono-validacion-telefono"></i>
                   <i class="fa-solid fa-circle-xmark icono-error" id="icono-error-telefono"></i>
                 </div>
-                <p class="show-error disabled" id="tel-vacio">El teléfono solo admite números y debe contener entre 7 a 14 dígitos.</p>
+                <small></small>
       </div>
       <div class="login-datos">
         <label for="password-registro">CONTRASEÑA</label>
@@ -79,14 +80,13 @@
           <i class="fa-solid fa-circle-check  icono-validacion" id="icono-validacion-password"></i>
           <i class="fa-solid fa-circle-xmark icono-error" id="icono-error-password"></i>
         </div>
-        <p class="show-error disabled" id="pass-vacio">La contraseña debe contener entre 8 a 12 dígitos</p>
-        
+        <small></small>
       </div>
 
 
       
 
-      <button type="submit" class="btn" id="boton-registro">REGISTRATE</button>
+      <button class="btn" id="boton-registro">REGISTRATE</button>
     </form>
 
     <div class="login-register">

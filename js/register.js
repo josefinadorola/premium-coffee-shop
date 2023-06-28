@@ -1,10 +1,10 @@
 const formRegistro = document.querySelector("#form-registro");
 const inputNombre = document.querySelector("#nombre");
-const inputCorreoRegistro = document.querySelector("#correo-registro");
+const inputCorreo = document.querySelector("#correo-registro");
 const inputTelefono = document.querySelector("#telefono");
-const inputPassRegistro = document.querySelector("#password-registro");
+const inputPass = document.querySelector("#password-registro");
 
-const inputs = document.querySelectorAll("#form-registro input");
+
 
 
 /*EXPRESIONES REGULARES*/ 
@@ -17,101 +17,86 @@ const expresiones = {
 
 }
 
-// const validarInputs = () => {
-//  console.log("funciona");
-// }
+const isEmpty = (input) => {
+  return !input.value.trim().length;
+}
+
+const isBetween = (input, min, max) => {
+  return input.value.length >= min && input.value.length <= max;
+}
+
+//Función de error
+const showError = (input, msj) => {
+  const inputContainer = input.parentElement;
+  inputContainer.classList.remove("success");
+  inputContainer.classList.add("error");
+  const error = inputContainer.querySelector("small");
+  error.style.display = "block";
+  error.textContent = msj;
+}
+
+const showSuccess = (input) => {
+  const inputContainer = input.parentElement;
+  inputContainer.classList.remove("error");
+  inputContainer.classList.add("success");
+  const error = inputContainer.querySelector("small");
+  error.style.display = "none";
+  error.textContent = "";
+  
+}
 
 
-// inputs.forEach((input) => {
-//   input.addEventListener('keyup', validarInputs);
-//   input.addEventListener('blur', validarInputs);
-// });
+//Validación Inputs
+const validateInputText = (input) => {
+  let valid = false;
+  const minCharacters = 3;
+  const maxCharacters = 40;
 
 
-const validarNombre = () => {
-  if (expresiones.nombre.test(inputNombre.value)){
-    document.querySelector("#icono-error-nombre").style.visibility=("hidden");
-    document.querySelector("#nombre-vacio").classList.add("disabled")
-    document.querySelector("#icono-validacion-nombre").style.visibility=("visible");
+  if (isEmpty()){
+       //si el input esta vacio, mostramos error
+      showError(input, "Este campo es obligatorio");
+      document.querySelector("#icono-error-nombre").style.visibility=("visible");
+  document.querySelector("#nombre-vacio").classList.remove("disabled")
+      return;
+     }
+
+   //validamos cantidad de carácteres, mostramos error
+  if(!isBetween(input, minCharacters, maxCharacters)){
+    showError(input, `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres`);
   }
-  else{ 
-    document.querySelector("#icono-error-nombre").style.visibility=("visible");
-  document.querySelector("#nombre-vacio").classList.remove("disabled")}
+ 
+  showSuccess(input);
+  valid= true;
+  return valid;
 
 }
 
 
-const validarCorreo = () => {
-  if (expresiones.correo.test(inputCorreoRegistro.value) ){
-    document.querySelector("#icono-error-correo").style.visibility=("hidden");
-    document.querySelector("#correo-vacio").classList.add("disabled")
-    document.querySelector("#icono-validacion-correo").style.visibility=("visible");
-  }
-  else{ 
-    document.querySelector("#icono-error-correo").style.visibility=("visible");
-  document.querySelector("#correo-vacio").classList.remove("disabled")}
+//Validación general y local storage
 
-}
+const validateForm = (e) => {
 
-const validarTelefono = () => {
-  if (expresiones.telefono.test(inputTelefono.value) ){
-    document.querySelector("#icono-error-telefono").style.visibility=("hidden");
-    document.querySelector("#tel-vacio").classList.add("disabled")
-    document.querySelector("#icono-validacion-telefono").style.visibility=("visible");
-  }
-  else{ 
-    document.querySelector("#icono-error-telefono").style.visibility=("visible");
-  document.querySelector("#tel-vacio").classList.remove("disabled")}
+  //e.preventDefault();
 
-}
-
-const validarPassword = () => {
-  if (expresiones.password.test(inputPassRegistro.value) ){
-    document.querySelector("#icono-error-password").style.visibility=("hidden");
-    document.querySelector("#pass-vacio").classList.add("disabled")
-    document.querySelector("#icono-validacion-password").style.visibility=("visible");
-  }
-  else{ 
-    document.querySelector("#icono-error-password").style.visibility=("visible");
-  document.querySelector("#pass-vacio").classList.remove("disabled")}
+  //Prevenir comportamiento por default
+  //Validar nuevamente todos los imputs
+  //Si los inputs son válidos, gaurdar la data
+  //Guardar en local storage
+  //Feedback al usuario
+  //Redirigir al login
 
 }
 
 
-const registro = (e) => {
-  e.preventDefault();
 
-    
+const init = () => {
+  formRegistro.addEventListener("submit", validateForm);
+  inputNombre.addEventListener("input", () => validateInputText(inputNombre));
+  inputCorreo.addEventListener("input", () => validateInputCorreo(inputCorreo));
+  inputTelefono.addEventListener("input", () => validateInputTelefono(inputTelefono));
+  inputPass.addEventListener("input", () => validateInputPass(inputPass));
+}
 
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-  const usuarioRegistrado = usuarios.find(
-    (usuario) => usuario.correo === inputCorreoRegistro.value
-  );
-
-  if (usuarioRegistrado) {
-    const emailRegistrado = document.querySelector("#email-registrado");
-    const imputContainer = document.querySelector("#input-container-correo");
-    emailRegistrado.classList.remove("disabled");
-    imputContainer.classList.add("error-input");
-  } else {
-    usuarios.push({
-      nombre: inputNombre.value,
-      correo: inputCorreoRegistro.value,
-      telefono: inputTelefono.value,
-      password: inputPassRegistro.value,
-    });
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    
-    //redireccion a login
-    document.querySelector("#registro-realizado").classList.remove("disabled");
-    
-  }
-};
-
-formRegistro.addEventListener("submit", registro);
-
-inputNombre.addEventListener('blur', validarNombre);
-inputCorreoRegistro.addEventListener('blur', validarCorreo);
-inputTelefono.addEventListener('blur', validarTelefono);
-inputPassRegistro.addEventListener('blur', validarPassword);
+init();
 
