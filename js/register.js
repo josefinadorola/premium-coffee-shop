@@ -53,11 +53,9 @@ const validateInputText = (input) => {
   const maxCharacters = 40;
 
 
-  if (isEmpty()){
+  if (isEmpty(input)){
        //si el input esta vacio, mostramos error
       showError(input, "Este campo es obligatorio");
-      document.querySelector("#icono-error-nombre").style.visibility=("visible");
-  document.querySelector("#nombre-vacio").classList.remove("disabled")
       return;
      }
 
