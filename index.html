@@ -110,7 +110,7 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <form class="formulario">
+          <form class="formulario" id="form-contacto">
             <div class="login-datos">
               <label for="nombre">NOMBRE</label>
               <div class="input-container">
@@ -118,7 +118,7 @@
                 <input
                   type="text"
                   id="nombre"
-                  required
+                  name="nombre"
                   placeholder="Josefina Dorola"
                 />
               </div>
@@ -130,7 +130,7 @@
                   <input
                     type="email"
                     id="correo"
-                    required
+                    name="correo"
                     placeholder="josefinad@gmail.com"
                   />
                 </div>
@@ -140,16 +140,15 @@
               <div class="input-container">
               <i class="fa-solid fa-message icono-input"></i>
               <textarea
+              id="mensaje"
                 name="mensaje"
-                id=""
                 cols="30"
                 rows="7"
-                required
                 placeholder="Escribe tu consulta..."
               ></textarea>
               </div>
             </div>
-
+<small id="form-error-contacto"></small>
             <button type="submit" class="btn">ENVIAR</button>
           </form>
         </div>  

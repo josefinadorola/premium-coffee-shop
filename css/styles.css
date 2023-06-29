@@ -680,7 +680,8 @@ textarea:focus {
   max-width: 310px;
 }
 
-#form-error {
+#form-error,
+#form-error-contacto {
   color: #dc3545;
   font-size: 1rem;
   margin: 8px 0px;
