@@ -6,7 +6,11 @@ const inputPass = document.querySelector("#password-registro");
 
 /*EXPRESIONES REGULARES*/
 
-const usuarios = [];
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+const saveToLocalStorage = () => {
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+};
 
 //funcion campo vacío
 const isEmpty = (input) => {
@@ -61,6 +65,8 @@ const showSuccess = (input) => {
   error.textContent = "";
 };
 
+/* VALIDACIONES DE INPUTS */
+
 //Validación input nombre
 const validateInputText = (input) => {
   let valid = false;
@@ -113,7 +119,7 @@ const validateInputCorreo = (input) => {
   return valid;
 };
 
-//validacion teéfono
+//validacion teléfono
 const validateInputTelefono = (input) => {
   let valid = false;
 
@@ -156,16 +162,33 @@ const validateInputPass = (input) => {
   return valid;
 };
 
+/* FIN VALIDACIONES DE INPUTS */
+
 //Validación general y local storage
 
 const validateForm = (e) => {
-  //e.preventDefault();
   //Prevenir comportamiento por default
-  //Validar nuevamente todos los imputs
+  e.preventDefault();
+  //Validar nuevamente todos los imput
+  let nombreValido = validateInputText(inputNombre);
+  let correoValido = validateInputCorreo(inputCorreo);
+  let telValido = validateInputTelefono(inputTelefono);
+  let passValido = validateInputPass(inputPass);
+
+  let formValido = nombreValido && correoValido && telValido && passValido;
   //Si los inputs son válidos, gaurdar la data
-  //Guardar en local storage
-  //Feedback al usuario
-  //Redirigir al login
+  if (formValido) {
+    usuarios.push({
+      nombre: inputNombre.value,
+      correo: inputCorreo.value,
+      telefono: inputTelefono.value,
+      password: inputPass.value,
+    });
+    //Guardar en local storage
+    saveToLocalStorage();
+    //Feedback al usuario
+    document.querySelector("#registro-realizado").classList.remove("disabled");
+  }
 };
 
 const init = () => {
