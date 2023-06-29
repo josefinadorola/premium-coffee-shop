@@ -76,9 +76,8 @@ const login = (e) => {
 
     //guardamos en Sesion Storage
     saveToSessionStorage(usuario);
-    // //traer usuario correspondiente
+    //Feedback al usuario
     alert(`Bienvenido ${usuario.nombre}`);
-
     //redirigir al home
     window.location.href = "../index.html";
   }

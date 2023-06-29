@@ -8,6 +8,7 @@ const closeMenu = document.querySelector("#close-menu");
 const backMenu = document.querySelector("#back-menu");
 let botonesAgregar = document.querySelectorAll(".boton-comprar");
 const numerito = document.querySelector("#numerito");
+const usuarioActivo = document.querySelector("#usuario-activo");
 
 let carrito;
 let carritoLS = localStorage.getItem("productos-carrito");
@@ -106,6 +107,12 @@ const cerrarrMenu = () => {
   backMenu.style.display = "none";
 };
 
+const usuarioActivoSS = JSON.parse(sessionStorage.getItem("usuario-activo"));
+
+const showUsuario = () => {
+  usuarioActivo.textContent = `Hola, ${usuarioActivoSS.nombre}`;
+};
+
 const init = () => {
   cargarProductos(productos);
   filtroCategorias();
@@ -115,6 +122,8 @@ const init = () => {
   closeMenu.addEventListener("click", cerrarrMenu);
   backMenu.addEventListener("click", cerrarrMenu);
   nav.addEventListener("click", cerrarrMenu);
+
+  showUsuario();
 };
 
 init();

@@ -184,8 +184,14 @@ section {
 }
 
 .container-titulos p {
+  font-size: 1.1rem;
+}
+
+#usuario-activo {
   color: var(--brown-light);
-  font-weight: bold;
+  width: 300px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .container-titulos h1 {

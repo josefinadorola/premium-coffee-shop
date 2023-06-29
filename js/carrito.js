@@ -10,7 +10,7 @@ const vaciarCarritoBoton = document.querySelector("#vaciar-carrito");
 const comprarCarritoBoton = document.querySelector("#comprar-carrito");
 const totalCarrito = document.querySelector("#total-carrito");
 
-function cargarProductosCarrito() {
+const cargarProductosCarrito = () => {
   if (carrito && carrito.length > 0) {
     carritoVacio.classList.add("disabled");
     containerCarrito.classList.remove("disabled");
@@ -49,19 +49,17 @@ function cargarProductosCarrito() {
   }
   actualizarBotonesEliminar();
   actualizarTotal();
-}
+};
 
-cargarProductosCarrito();
-
-function actualizarBotonesEliminar() {
+const actualizarBotonesEliminar = () => {
   botonesEliminar = document.querySelectorAll(".boton-eliminar");
 
   botonesEliminar.forEach((boton) => {
     boton.addEventListener("click", eliminarDelCarrito);
   });
-}
+};
 
-function eliminarDelCarrito(e) {
+const eliminarDelCarrito = (e) => {
   const idBotonEliminar = e.currentTarget.id;
 
   const index = carrito.findIndex((producto) => producto.id == idBotonEliminar);
@@ -71,30 +69,36 @@ function eliminarDelCarrito(e) {
   cargarProductosCarrito();
 
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
-}
+};
 
-function vaciarCarrito() {
+const vaciarCarrito = () => {
   carrito.length = 0;
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
   cargarProductosCarrito();
-}
+};
 
-function actualizarTotal() {
+const actualizarTotal = () => {
   const calculoTotal = carrito.reduce(
     (acc, producto) => acc + producto.precio * producto.cantidad,
     0
   );
-  totalCarrito.innerText = `$${calculoTotal}`;
-}
+  totalCarrito.innerText = `$${calculoTotal.toFixed(2)}`;
+};
 
-function comprarCarrito() {
+const comprarCarrito = () => {
   carrito.length = 0;
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 
   carritoVacio.classList.add("disabled");
   containerCarrito.classList.add("disabled");
   carritoComprado.classList.remove("disabled");
-}
+};
 
-vaciarCarritoBoton.addEventListener("click", vaciarCarrito);
-comprarCarritoBoton.addEventListener("click", comprarCarrito);
+const init = () => {
+  cargarProductosCarrito();
+
+  vaciarCarritoBoton.addEventListener("click", vaciarCarrito);
+  comprarCarritoBoton.addEventListener("click", comprarCarrito);
+};
+
+init();
