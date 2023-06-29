@@ -671,6 +671,7 @@ textarea:focus {
   display: none;
   margin-top: 0.5rem;
   font-size: 0.7rem;
+  max-width: 310px;
 }
 
 #form-error {

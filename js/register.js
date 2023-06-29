@@ -8,6 +8,7 @@ const inputPass = document.querySelector("#password-registro");
 
 const usuarios = [];
 
+//funcion campo vacío
 const isEmpty = (input) => {
   return !input.value.trim().length;
 };
@@ -16,13 +17,27 @@ const isBetween = (input, min, max) => {
   return input.value.length >= min && input.value.length <= max;
 };
 
+//funcion correo válido
 const isEmailValid = (input) => {
-  const ex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-  return ex.test(input.value.trim());
+  const re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  return re.test(input.value.trim());
 };
 
+//funcion correo existente en array
 const isExistingEmail = (input) => {
   return usuarios.some((usuario) => usuario.correo === input.value.trim());
+};
+
+//funcion tel válido
+const isTelefonoValid = (input) => {
+  const re = /^[0-9]{10}$/;
+  return re.test(input.value.trim());
+};
+
+//funcion pass válido
+const isPassSecure = (input) => {
+  const re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  return re.test(input.value.trim());
 };
 
 //Función de error
@@ -36,6 +51,7 @@ const showError = (input, msj) => {
   error.textContent = msj;
 };
 
+//funcion validadora
 const showSuccess = (input) => {
   const inputContainer = input.parentElement;
   inputContainer.classList.remove("error");
@@ -97,6 +113,49 @@ const validateInputCorreo = (input) => {
   return valid;
 };
 
+//validacion teéfono
+const validateInputTelefono = (input) => {
+  let valid = false;
+
+  //si el input esta vacio, mostramos error
+  if (isEmpty(input)) {
+    showError(input, "El teléfono es obligatorio.");
+    return;
+  }
+
+  if (!isTelefonoValid(input)) {
+    showError(input, "El teléfono no es válido.");
+    return;
+  }
+
+  showSuccess(input);
+  valid = true;
+  return valid;
+};
+
+//validacion password
+const validateInputPass = (input) => {
+  let valid = false;
+
+  //si el input esta vacio, mostramos error
+  if (isEmpty(input)) {
+    showError(input, "La contraseña es obligatoria.");
+    return;
+  }
+
+  if (!isPassSecure(input)) {
+    showError(
+      input,
+      "La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un simbolo."
+    );
+    return;
+  }
+
+  showSuccess(input);
+  valid = true;
+  return valid;
+};
+
 //Validación general y local storage
 
 const validateForm = (e) => {
@@ -112,17 +171,11 @@ const validateForm = (e) => {
 const init = () => {
   formRegistro.addEventListener("submit", validateForm);
   inputNombre.addEventListener("input", () => validateInputText(inputNombre));
-  inputNombre.addEventListener("blur", () => validateInputText(inputNombre));
   inputCorreo.addEventListener("input", () => validateInputCorreo(inputCorreo));
-  inputCorreo.addEventListener("blur", () => validateInputCorreo(inputCorreo));
   inputTelefono.addEventListener("input", () =>
     validateInputTelefono(inputTelefono)
   );
-  inputTelefono.addEventListener("blur", () =>
-    validateInputTelefono(inputTelefono)
-  );
   inputPass.addEventListener("input", () => validateInputPass(inputPass));
-  inputPass.addEventListener("blur", () => validateInputPass(inputPass));
 };
 
 init();
