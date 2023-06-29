@@ -368,7 +368,6 @@ section {
   margin-bottom: 2rem;
 }
 
-
 .redes {
   padding: 2rem;
 }
@@ -460,7 +459,6 @@ section {
   width: 100%;
 }
 
-
 /*Seccion de contacto*/
 
 .container-contacto {
@@ -489,7 +487,6 @@ iframe {
   gap: 1rem;
   max-width: 800px;
   width: 50%;
- 
 }
 
 .input-container input,
@@ -503,10 +500,9 @@ textarea {
   padding: 1rem 2.5rem;
   border: 2px solid transparent;
   color: var(--color-font);
- 
 }
 
-.input-container{
+.input-container {
   position: relative;
 }
 
@@ -517,13 +513,11 @@ textarea {
   left: 10px;
 }
 
-
-
 input:focus,
 textarea:focus {
   border: 2px solid #8d734a;
   outline: none;
- }
+}
 
 .formulario .btn {
   width: 100%;
@@ -545,12 +539,11 @@ textarea:focus {
 
 /*FIN FORMULARIO GENERAL*/
 
-
 /*LOGIN-REGISTRO*/
 
 .container-login {
   max-width: 1200px;
-  padding: 5rem;
+  padding: 8rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -664,54 +657,29 @@ textarea:focus {
 
 /*ERRORES/VALIDACIONES*/
 
-.login-datos.error input{
+.input-container.error input {
   border: 1px solid #d83131;
 }
 
-.login-datos.success input{
+.input-container.success input {
   border: 1px solid #28a745;
 }
 
-.login-datos small{
-  color:  #dc3545;
-  max-width: 350px;
+.input-container small {
+  color: #dc3545;
   text-align: center;
   display: none;
-  }
-
-.icono-validacion{
-  color: green;
-  position: absolute;
-  top: 18px;
-  right: 10px;
-  visibility: hidden;
-}
-
-.icono-error{
-  color: red;
-  position: absolute;
-  top: 18px;
-  right: 10px;
-  visibility:hidden;
- 
-}
-
-.show-error {
-  color: #d83131;
+  margin-top: 0.5rem;
   font-size: 0.7rem;
-  text-align: center;
 }
 
-#form-error{
+#form-error {
   color: #dc3545;
   font-size: 1rem;
   margin: 8px 0px;
   max-width: 350px;
   text-align: center;
 }
-
-
-
 
 /*CARRITO*/
 
