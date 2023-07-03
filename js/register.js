@@ -3,7 +3,7 @@ const inputNombre = document.querySelector("#nombre");
 const inputCorreo = document.querySelector("#correo-registro");
 const inputTelefono = document.querySelector("#telefono");
 const inputPass = document.querySelector("#password-registro");
-const modalRegistro = document.querySelector("#model-registro");
+const modalRegistro = document.querySelector("#modal-registro");
 
 /*EXPRESIONES REGULARES*/
 
