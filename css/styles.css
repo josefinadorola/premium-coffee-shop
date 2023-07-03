@@ -610,56 +610,41 @@ textarea:focus {
   font-weight: 600;
 }
 
-.body-registro {
-  position: relative;
-}
 
-.registro-realizado-container {
+.modal-registro {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--color-primary);
-  display: flex;
-  justify-content: center;
-}
-
-.registro-realizado {
+  left: 500px;
+  z-index: 6;
   margin-top: 100px;
-  width: 600px;
-  height: 500px;
+  width: 350px;
+  height: 200px;
   background-color: var(--color-font);
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 1rem;
   padding: 3rem;
+  transition: all 1s ease;
+  transform: translateY(-200%);
 }
 
-.registro-realizado h3 {
-  font-size: 2rem;
+.modal-registro h3 {
+  font-size: 1rem;
 }
 
-.registro-realizado p {
+.modal-registro p {
   font-size: 0.8rem;
   color: var(--color-primary);
 }
 
-.registro-realizado i {
+.modal-registro i {
   color: rgb(31, 161, 31);
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
-.registro-realizado a {
-  padding: 0.8rem 1.8rem;
-  background-color: #8d734a;
-  color: var(--color-primary);
-  border-radius: 0.2rem;
-  font-weight: 600;
-}
 
 /*ERRORES/VALIDACIONES*/
 
@@ -680,8 +665,7 @@ textarea:focus {
   max-width: 310px;
 }
 
-#form-error,
-#form-error-contacto {
+#form-error{
   color: #dc3545;
   font-size: 1rem;
   margin: 8px 0px;
@@ -690,6 +674,35 @@ textarea:focus {
 }
 
 /*CARRITO*/
+
+.modal{
+ position: fixed;
+ top: 0;
+ right: 0; 
+ z-index: 5;
+ background-color: var(--brown-light);
+ padding: 0.5rem;
+ margin: 1rem;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ gap: 0.5rem;
+ align-items: center;
+ text-align: center;
+ max-width: 300px;
+ height: 120px;
+ border-radius: 0.5rem;
+ transition: all 0.5s ease;
+ transform: translateY(-200%);
+  
+}
+
+.modal p{
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+
 
 .main-carrito {
   width: 100%;

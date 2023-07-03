@@ -9,10 +9,7 @@ const backMenu = document.querySelector("#back-menu");
 let botonesAgregar = document.querySelectorAll(".boton-comprar");
 const numerito = document.querySelector("#numerito");
 const usuarioActivo = document.querySelector("#usuario-activo");
-const formContacto = document.querySelector("#form-contacto");
-const inputCorreoContacto = document.querySelector("#correo");
-const inputNombreContacto = document.querySelector("#nombre");
-const inputMsj = document.querySelector("#mensaje");
+const modal = document.querySelector("#modal");
 
 let carrito;
 let carritoLS = localStorage.getItem("productos-carrito");
@@ -88,7 +85,10 @@ const agregarCarrito = (e) => {
   }
 
   actualizarNumerito();
-  alert(`El artículo ${productoAgregado.nombre} ha sido agregado al carrito.`);
+  modal.style.transform=("translateY(0)");
+  setTimeout(() => { modal.style.transform=("translateY(-200%)")
+    
+  }, 1500);
 
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
 };
@@ -117,20 +117,12 @@ const showUsuario = () => {
   usuarioActivo.textContent = `Hola, ${usuarioActivoSS.nombre}`;
 };
 
-/*VALIDACIONES FORMULARIO DE CONTACTO*/
-
-function validarFormContacto(e) {
-  e.preventDefault();
-
-  const data = new FormData(this);
-  console.log(data.get("nombre"));
-}
 
 const init = () => {
   cargarProductos(productos);
   filtroCategorias();
 
-  formContacto.addEventListener("submit", validarFormContacto);
+ 
 
   toggleMenu.addEventListener("click", mostrarMenu);
 

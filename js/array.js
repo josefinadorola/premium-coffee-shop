@@ -3,7 +3,7 @@ const productos = [
     id: 1,
     nombre: "Arabica",
     categoria: "capsulas",
-    precio: 1700,
+    precio: 1699,
     imagen: "../assets/img/1.png",
   },
 
@@ -11,7 +11,7 @@ const productos = [
     id: 2,
     nombre: "Colombia",
     categoria: "capsulas",
-    precio: 1500,
+    precio: 1499,
     imagen: "../assets/img/2.png",
   },
 
@@ -19,7 +19,7 @@ const productos = [
     id: 3,
     nombre: "Venecia",
     categoria: "capsulas",
-    precio: 1800,
+    precio: 1799,
     imagen: "../assets/img/3.png",
   },
 
@@ -27,7 +27,7 @@ const productos = [
     id: 4,
     nombre: "Napoles",
     categoria: "capsulas",
-    precio: 1800,
+    precio: 1799,
     imagen: "../assets/img/4.png",
   },
 
@@ -35,14 +35,14 @@ const productos = [
     id: 5,
     nombre: "Brasil",
     categoria: "capsulas",
-    precio: 1500,
+    precio: 1499,
     imagen: "../assets/img/5.png",
   },
   {
     id: 6,
     nombre: "Kenia",
     categoria: "capsulas",
-    precio: 1600,
+    precio: 1599,
     imagen: "../assets/img/6.png",
   },
 
@@ -50,7 +50,7 @@ const productos = [
     id: 7,
     nombre: "Arabica",
     categoria: "molido",
-    precio: 1300,
+    precio: 1299,
     imagen: "../assets/img/7.png",
   },
 
@@ -66,7 +66,7 @@ const productos = [
     id: 9,
     nombre: "Colombia",
     categoria: "molido",
-    precio: 1100,
+    precio: 1099,
     imagen: "../assets/img/9.png",
   },
 
@@ -74,14 +74,14 @@ const productos = [
     id: 10,
     nombre: "Kenia",
     categoria: "molido",
-    precio: 1200,
+    precio: 1199,
     imagen: "../assets/img/10.png",
   },
   {
     id: 11,
     nombre: "Italia",
     categoria: "molido",
-    precio: 1500,
+    precio: 1499,
     imagen: "../assets/img/11.png",
   },
 
@@ -89,7 +89,7 @@ const productos = [
     id: 12,
     nombre: "Cafetera para capsulas",
     categoria: "accesorios",
-    precio: 40000,
+    precio: 40999,
     imagen: "../assets/img/12.png",
   },
 
@@ -97,7 +97,7 @@ const productos = [
     id: 13,
     nombre: "Cafetera italiana",
     categoria: "accesorios",
-    precio: 25000,
+    precio: 25599,
     imagen: "../assets/img/13.png",
   },
 
@@ -105,7 +105,7 @@ const productos = [
     id: 14,
     nombre: "Cafetera francesa",
     categoria: "accesorios",
-    precio: 12000,
+    precio: 12699,
     imagen: "../assets/img/14.png",
   },
 
@@ -113,7 +113,7 @@ const productos = [
     id: 15,
     nombre: "Cafetera de filtro",
     categoria: "accesorios",
-    precio: 20000,
+    precio: 20299,
     imagen: "../assets/img/15.png",
   },
 ];

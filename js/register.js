@@ -3,6 +3,7 @@ const inputNombre = document.querySelector("#nombre");
 const inputCorreo = document.querySelector("#correo-registro");
 const inputTelefono = document.querySelector("#telefono");
 const inputPass = document.querySelector("#password-registro");
+const modalRegistro = document.querySelector("#model-registro");
 
 /*EXPRESIONES REGULARES*/
 
@@ -187,7 +188,11 @@ const validateForm = (e) => {
     //Guardar en local storage
     saveToLocalStorage();
     //Feedback al usuario
-    document.querySelector("#registro-realizado").classList.remove("disabled");
+    modalRegistro.style.transform=("translateY(0)");
+  setTimeout(() => { modalRegistro.style.transform=("translateY(-200%)")
+    
+  }, 1500);
+  window.location.href
   }
 };
 
