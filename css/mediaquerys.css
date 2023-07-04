@@ -94,9 +94,8 @@
     margin-top: 100px;
   }
 
-  .titulo-carrito{
+  .titulo-carrito {
     font-size: 1rem;
-    
   }
 }
 
@@ -239,56 +238,43 @@
     font-size: 0.6rem;
   }
 
-  .login-register,
-  .registro-realizado{
+  .login-register {
     margin-top: 0.5rem;
   }
 
-
-  .registro-realizado{
-    margin-top: 80px;
-  }
-
-
-  .registro-realizado{
+  .modal-registro {
+    width: 300px;
+    height: 160px;
+    gap: 1rem;
     padding: 1rem;
-    width: 310px;
-  height: 250px;
-   gap: 1rem;
-     }
-
-  .registro-realizado h3{
-    font-size: 1.2rem;
+    margin: 0.5rem;
   }
 
-  .registro-realizado{
-    font-size: 0.6rem;
+  .modal-registro h3 {
+    font-size: 1rem;
   }
 
-  .registro-realizado i{
+  .modal-registro p {
+    font-size: 0.7rem;
+    color: var(--color-primary);
+  }
+
+  .modal-registro i {
+    color: rgb(31, 161, 31);
     font-size: 2rem;
   }
 
-  .registro-realizado a{
-    font-size: 0.8rem;
-    padding: 0.5rem 1 rem;
-  }
-
-
-  
-
-
   /*CARRITO*/
 
-  .container-carrito{
+  .container-carrito {
     padding: 0.5rem;
     gap: 1rem;
   }
 
-  .container-carrito h4{
+  .container-carrito h4 {
     font-size: 0.8rem;
   }
- 
+
   .item {
     padding: 1rem;
     font-size: 0.6rem;
@@ -302,7 +288,7 @@
     gap: 0;
   }
 
-  .item img{
+  .item img {
     width: 50px;
     height: 50px;
   }
@@ -313,20 +299,20 @@
     font-size: 0.6rem;
   }
 
-  .botones-carrito{
+  .botones-carrito {
     background-color: transparent;
     border: none;
     color: #fff;
     font-size: 0.6rem;
   }
- 
+
   .botones-carrito-container {
     align-items: center;
     flex-direction: column-reverse;
     gap: 0;
   }
 
-  .vaciar-carrito-container{
+  .vaciar-carrito-container {
     display: flex;
     justify-content: center;
   }
