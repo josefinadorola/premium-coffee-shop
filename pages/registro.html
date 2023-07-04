@@ -1,106 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="shortcut icon"
-      href="./assets/img/logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/mediaquerys.css" />
-    <script
-      src="https://kit.fontawesome.com/22c08125c6.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Premium Coffee</title>
-  </head>
-  <body class="body-registro">
-    <header>
-      <a href="../index.html"><img src="../assets/img/logo.png" alt="logo" class="logo logo-login"></a>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <main class="main-login">
-  <div class="container-login">
-    <h2 class="login-titulos" id="login">REGISTRO</h2>
-    <form class="formulario form-login" id="form-registro">
-      <div class="login-datos">
-        <label for="nombre">NOMBRE Y APELLIDO</label>
-        <div class="input-container">
-          <i class="fa-solid fa-user icono-input"></i>
-          <input
-            type="text"
-            name="nombre"
-            id="nombre"
-                    placeholder="Josefina Dorola"
-          />
-        <small></small>
-        </div>
-       
-      </div>
+  <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/mediaquerys.css" />
+  <script src="https://kit.fontawesome.com/22c08125c6.js" crossorigin="anonymous"></script>
+  <title>Premium Coffee</title>
+</head>
+
+<body class="body-registro">
+  <header>
+    <a href="../index.html"><img src="../assets/img/logo.png" alt="logo" class="logo logo-login"></a>
+  </header>
+
+  <main class="main-login">
+    <div class="container-login">
+      <h2 class="login-titulos" id="login">REGISTRO</h2>
+      <form class="formulario form-login" id="form-registro">
         <div class="login-datos">
-            <label for="correo-registro">E-MAIL</label>
-            <div class="input-container" id="input-container-correo">
-              <i class="fa-solid fa-envelope icono-input"></i>
-              <input
-                type="email"
-                name="correo"
-                id="correo-registro"
-                    placeholder="josefinad@gmail.com"
-                              />
-                  <small></small>
-            </div>
-            
-            <div class="login-datos">
-                <label for="telefono">TELÉFONO</label>
-                <div class="input-container">
-                  <i class="fa-solid fa-phone icono-input"></i>
-                  <input
-                    type="tel"
-                    name="telefono"
-                    id="telefono"
-                                  placeholder="1123890563"
+          <label for="nombre">NOMBRE Y APELLIDO</label>
+          <div class="input-container">
+            <i class="fa-solid fa-user icono-input"></i>
+            <input type="text" name="nombre" id="nombre" placeholder="Josefina Dorola" />
+            <small></small>
+          </div>
 
-                  />
-                  <small></small>
-                </div>
-          
-      </div>
-      <div class="login-datos">
-        <label for="password-registro">CONTRASEÑA</label>
-        <div class="input-container">
-          <i class="fa-solid fa-lock icono-input"></i>
-          <input type="password" name="password" id="password-registro" placeholder="**********" autocomplete="off" />
-          <small></small>
         </div>
-       
+        <div class="login-datos">
+          <label for="correo-registro">E-MAIL</label>
+          <div class="input-container" id="input-container-correo">
+            <i class="fa-solid fa-envelope icono-input"></i>
+            <input type="email" name="correo" id="correo-registro" placeholder="josefinad@gmail.com" />
+            <small></small>
+          </div>
+
+          <div class="login-datos">
+            <label for="telefono">TELÉFONO</label>
+            <div class="input-container">
+              <i class="fa-solid fa-phone icono-input"></i>
+              <input type="tel" name="telefono" id="telefono" placeholder="1123890563" />
+              <small></small>
+            </div>
+
+          </div>
+          <div class="login-datos">
+            <label for="password-registro">CONTRASEÑA</label>
+            <div class="input-container">
+              <i class="fa-solid fa-lock icono-input"></i>
+              <input type="password" name="password" id="password-registro" placeholder="**********"
+                autocomplete="off" />
+              <small></small>
+            </div>
+
+          </div>
+
+          <button class="btn" id="boton-registro">REGISTRATE</button>
+      </form>
+
+      <div class="login-register">
+        <p>¿Ya tenés cuenta? <a href="./login.html">Iniciá sesión</a></p>
       </div>
 
+  </main>
 
-      
+  <div id="modal-registro" class="modal-registro">
+    <i class="fa-solid fa-circle-check"></i>
+    <h3>Registro realizado con exito</h3>
+    <p>Sus datos se enviaron correctamente.</p>
+  </div>
 
-      <button class="btn" id="boton-registro">REGISTRATE</button>
-    </form>
+  <script src="https://kit.fontawesome.com/22c08125c6.js" crossorigin="anonymous"></script>
+  <script src="../js/register.js"></script>
+</body>
 
-    <div class="login-register">
-      <p>¿Ya tenés cuenta? <a href="./login.html">Iniciá sesión</a></p>
-    </div>
-  
- </main>
-   
-<div id="modal-registro" class="modal-registro">
-  <i class="fa-solid fa-circle-check"></i>
-  <h3>Registro realizado con exito</h3>
-  <p>Sus datos se enviaron correctamente.</p>
-      </div>
-
-    <script
-      src="https://kit.fontawesome.com/22c08125c6.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/register.js"></script>
-  </body>
 </html>

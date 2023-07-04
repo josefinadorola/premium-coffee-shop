@@ -1,204 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="shortcut icon"
-      href="./assets/img/logo.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/mediaquerys.css" />
-    <script
-      src="https://kit.fontawesome.com/22c08125c6.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Premium Coffee</title>
-  </head>
-  <body>
-    <header>
-      <img src="./assets/img/menu.png" alt="menu" class="iconos-header" id="toggle-menu">
-      <nav class="nav" id="nav">
-        <img src="./assets/img/close.png" alt="close" class="iconos-header close-menu" id="close-menu">
-        <ul class="navbar-list">
-          <li class="menu-opciones"><a href="./index.html#hero">INICIO</a></li>
-          <li class="menu-opciones"><a href="./index.html#shop">SHOP</a></li>
-          <li class="menu-opciones"><a href="./index.html#nosotros">NOSOTROS</a></li>
-          <li class="menu-opciones"><a href="./index.html#contacto">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <div class="back-menu" id="back-menu"></div>
-      <a href="./index.html"
-        ><img src="./assets/img/logo.png" alt="logo" class="logo"
-      /></a>
-      <div class="container-iconos">
-            <a href="./pages/login.html"> <img src="./assets/img/user.png" alt="user" class="iconos-header" id="user"></a>  
-        <a href="./pages/carrito.html"><img src="./assets/img/cart.png" alt="cart" class="iconos-header" id="cart"><span class="numerito" id="numerito">0</span></a>
-      </div>
-  
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main>
-      <div class="barra-envios">
-        <p>ENVIOS A DOMICILIO A TODO EL PAIS</p>
+  <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/mediaquerys.css" />
+  <script src="https://kit.fontawesome.com/22c08125c6.js" crossorigin="anonymous"></script>
+  <title>Premium Coffee</title>
+</head>
+
+<body>
+  <header>
+    <img src="./assets/img/menu.png" alt="menu" class="iconos-header" id="toggle-menu">
+    <nav class="nav" id="nav">
+      <img src="./assets/img/close.png" alt="close" class="iconos-header close-menu" id="close-menu">
+      <ul class="navbar-list">
+        <li class="menu-opciones"><a href="./index.html#hero">INICIO</a></li>
+        <li class="menu-opciones"><a href="./index.html#shop">SHOP</a></li>
+        <li class="menu-opciones"><a href="./index.html#nosotros">NOSOTROS</a></li>
+        <li class="menu-opciones"><a href="./index.html#contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+    <div class="back-menu" id="back-menu"></div>
+    <a href="./index.html"><img src="./assets/img/logo.png" alt="logo" class="logo" /></a>
+    <div class="container-iconos">
+      <a href="./pages/login.html"> <img src="./assets/img/user.png" alt="user" class="iconos-header" id="user"></a>
+      <a href="./pages/carrito.html"><img src="./assets/img/cart.png" alt="cart" class="iconos-header" id="cart"><span
+          class="numerito" id="numerito">0</span></a>
+    </div>
+
+  </header>
+  <main>
+    <div class="barra-envios">
+      <p>ENVIOS A DOMICILIO A TODO EL PAIS</p>
+    </div>
+    <section id="hero">
+      <div class="container-titulos">
+        <span id="usuario-activo"></span>
+        <h1>
+          Descubrí el
+          <span>sabor real del</span>
+          <span>café</span>
+        </h1>
+        <a href="#nosotros" class="boton-h1">CONOCENOS >></a>
       </div>
-      <section id="hero">
-        <div class="container-titulos">
-          <span id="usuario-activo"></span>
-          <h1>
-            Descubrí el
-            <span>sabor real del</span>
-            <span>café</span>
-          </h1>
-          <a href="#nosotros" class="boton-h1">CONOCENOS >></a>
+    </section>
+    <section id="shop">
+      <h2>Nuestra <span>Tienda</span></h2>
+      <div class="container-shop">
+        <div class="shop-categorias-container">
+          <button id="todos" class="shop-categorias active">TODOS</button>
+          <button id="capsulas" class="shop-categorias">CAPSULAS</button>
+          <button id="molido" class="shop-categorias">MOLIDO</button>
+          <button id="accesorios" class="shop-categorias">ACCESORIOS</button>
         </div>
-      </section>
-      <section id="shop">
-        <h2>Nuestra <span>Tienda</span></h2>
-        <div class="container-shop">
-          <div class="shop-categorias-container">
-            <button id="todos" class="shop-categorias active">TODOS</button>
-            <button id="capsulas" class="shop-categorias">CAPSULAS</button>
-            <button id="molido" class="shop-categorias">MOLIDO</button>
-            <button id="accesorios" class="shop-categorias">ACCESORIOS</button>
-          </div>
-          <div id="container-shop-cards" class="container-shop-cards">
-
+        <div id="container-shop-cards" class="container-shop-cards">
 
           <!--Cargado por JS-->
-          
-          </div>
-          
-      
-      </section>
-      <section id="nosotros">
-        <h2><span>Nuestra</span> historia</h2>
-        <div class="container-nosotros">
-          <img src="./assets/img/cafe14.jpeg" alt="cafe" class="nosotros-img" />
 
-          <div class="nosotros-text">
-            <h4>¿Por Qué nuestro café es tan especial?</h4>
-            <p>
-              Café Premium, uno de los tostadores de café de especialidad más
-              reconocidos del país. Existimos para transformar la forma en que
-              se toma café en nuestro país.
-            </p>
-            <p>
-              Creemos que tostar buen café es producto del trabajo consciente,
-              la capacitación y la aplicación de la tecnología.
-            </p>
-            <p>
-              Viajamos al exterior varias veces al año para continuar
-              aprendiendo. Nuestro café quiere llevarte a volar fuera de tu
-              surco, haciendo la vida mas disparatada e interesante.
-            </p>
-          </div>
         </div>
-      </section>
-      <section id="contacto">
-        <h2>Seguimos<span> en contacto</span></h2>
-        <div class="container-contacto">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13108.389755654181!2d-58.840427!3d-34.77832225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1685386277662!5m2!1ses!2sar"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <form class="formulario" id="form-contacto">
-            <div class="login-datos">
-              <label for="nombre">NOMBRE</label>
-              <div class="input-container">
-                <i class="fa-solid fa-user icono-input"></i>
-                <input
-                  type="text"
-                  id="nombre"
-                  name="nombre"
-                  placeholder="Josefina Dorola"
-                />
-              </div>
-            </div>
-              <div class="login-datos">
-                <label for="correo">E-MAIL</label>
-                <div class="input-container">
-                  <i class="fa-solid fa-envelope icono-input"></i>
-                  <input
-                    type="email"
-                    id="correo"
-                    name="correo"
-                    placeholder="josefinad@gmail.com"
-                  />
-                </div>
-              </div>
-            <div class="login-datos">
-              <label for="correo">MENSAJE</label>
-              <div class="input-container">
-              <i class="fa-solid fa-message icono-input"></i>
-              <textarea
-              id="mensaje"
-                name="mensaje"
-                cols="30"
-                rows="7"
-                placeholder="Escribe tu consulta..."
-              ></textarea>
-              </div>
-            </div>
-            <button type="submit" class="btn">ENVIAR</button>
-          </form>
-              </div>  
-      </section>
-      <div class="redes">
-        <a href="https://www.instagram.com/" target="_blank">
-         <img src="./assets/img/ig.png" alt="ig" class="iconos-footer">
-         coffeepremium
-        </a> 
-         </div>
-    </main>
 
-    <footer class="footer">
-      <div class="container-footer">
-        <div class="container-datos-footer">
-          <div class="item-datos-footer">
-            <img src="./assets/img/ubicacion.png" alt="ubicacion" class="iconos-footer">
-            <h4>Local</h4>
-            <p>Lavalle 2563, Marcos Paz, Buenos Aires</p>
-          </div>
-          <div class="item-datos-footer">
-            <img src="./assets/img/mail.png" alt="mail" class="iconos-footer">
-            <h4>E-mail</h4>
-            <p>cafepremium@gmail.com</p>
-          </div>
-          <div class="item-datos-footer">
-       <a href="https://wa.me/1123890900" target="_blank">  <img src="./assets/img/ws.png" alt="phone" class="iconos-footer"></a>   
-            <h4>Comunicate</h4>
-            <p>011 2389 2963</p>
-          </div>
-          <div class="item-datos-footer">
-            <img src="./assets/img/clock.png" alt="clock" class="iconos-footer">
-            <h4>Horarios</h4>
-            <p>Lunes a Sábados: 8:00 - 00:00</p>
-           
-          </div>
-        </div>
-        <div class="footer-copy">
-          <p>© 2023 Coffee Premium | Todos los derechos reservados |</p>
+    </section>
+    <section id="nosotros">
+      <h2><span>Nuestra</span> historia</h2>
+      <div class="container-nosotros">
+        <img src="./assets/img/cafe14.jpeg" alt="cafe" class="nosotros-img" />
+
+        <div class="nosotros-text">
+          <h4>¿Por Qué nuestro café es tan especial?</h4>
+          <p>
+            Café Premium, uno de los tostadores de café de especialidad más
+            reconocidos del país. Existimos para transformar la forma en que
+            se toma café en nuestro país.
+          </p>
+          <p>
+            Creemos que tostar buen café es producto del trabajo consciente,
+            la capacitación y la aplicación de la tecnología.
+          </p>
+          <p>
+            Viajamos al exterior varias veces al año para continuar
+            aprendiendo. Nuestro café quiere llevarte a volar fuera de tu
+            surco, haciendo la vida mas disparatada e interesante.
+          </p>
         </div>
       </div>
-    </footer>
-    <div id="modal" class="modal modal-success">
-      <p>El producto se agregó correctamente al carrito.</p>
+    </section>
+    <section id="contacto">
+      <h2>Seguimos<span> en contacto</span></h2>
+      <div class="container-contacto">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13108.389755654181!2d-58.840427!3d-34.77832225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1685386277662!5m2!1ses!2sar"
+          width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form class="formulario" id="form-contacto">
+          <div class="login-datos">
+            <label for="nombre">NOMBRE</label>
+            <div class="input-container">
+              <i class="fa-solid fa-user icono-input"></i>
+              <input type="text" id="nombre" name="nombre" placeholder="Josefina Dorola" />
+            </div>
           </div>
-    <script
-      src="https://kit.fontawesome.com/22c08125c6.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/array.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/carrito.js"></script>
-  </body>
+          <div class="login-datos">
+            <label for="correo">E-MAIL</label>
+            <div class="input-container">
+              <i class="fa-solid fa-envelope icono-input"></i>
+              <input type="email" id="correo" name="correo" placeholder="josefinad@gmail.com" />
+            </div>
+          </div>
+          <div class="login-datos">
+            <label for="correo">MENSAJE</label>
+            <div class="input-container">
+              <i class="fa-solid fa-message icono-input"></i>
+              <textarea id="mensaje" name="mensaje" cols="30" rows="7" placeholder="Escribe tu consulta..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn">ENVIAR</button>
+        </form>
+      </div>
+    </section>
+    <div class="redes">
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="./assets/img/ig.png" alt="ig" class="iconos-footer">
+        coffeepremium
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="container-datos-footer">
+        <div class="item-datos-footer">
+          <img src="./assets/img/ubicacion.png" alt="ubicacion" class="iconos-footer">
+          <h4>Local</h4>
+          <p>Lavalle 2563, Marcos Paz, Buenos Aires</p>
+        </div>
+        <div class="item-datos-footer">
+          <img src="./assets/img/mail.png" alt="mail" class="iconos-footer">
+          <h4>E-mail</h4>
+          <p>cafepremium@gmail.com</p>
+        </div>
+        <div class="item-datos-footer">
+          <a href="https://wa.me/1123890900" target="_blank"> <img src="./assets/img/ws.png" alt="phone"
+              class="iconos-footer"></a>
+          <h4>Comunicate</h4>
+          <p>011 2389 2963</p>
+        </div>
+        <div class="item-datos-footer">
+          <img src="./assets/img/clock.png" alt="clock" class="iconos-footer">
+          <h4>Horarios</h4>
+          <p>Lunes a Sábados: 8:00 - 00:00</p>
+
+        </div>
+      </div>
+      <div class="footer-copy">
+        <p>© 2023 Coffee Premium | Todos los derechos reservados |</p>
+      </div>
+    </div>
+  </footer>
+  <div id="modal" class="modal modal-success">
+    <p>El producto se agregó correctamente al carrito.</p>
+  </div>
+  <script src="https://kit.fontawesome.com/22c08125c6.js" crossorigin="anonymous"></script>
+  <script src="./js/array.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/carrito.js"></script>
+</body>
+
 </html>
