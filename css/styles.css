@@ -69,6 +69,7 @@ header {
   width: 100px;
   height: 100px;
   transition: 0.5s;
+  margin-left: 50px;
 }
 
 .logo:hover {
