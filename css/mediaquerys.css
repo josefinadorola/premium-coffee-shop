@@ -68,7 +68,7 @@
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .container-datos-footer {
@@ -256,11 +256,9 @@
 
   .modal-registro p {
     font-size: 0.7rem;
-    color: var(--color-primary);
   }
 
   .modal-registro i {
-    color: rgb(31, 161, 31);
     font-size: 2rem;
   }
 

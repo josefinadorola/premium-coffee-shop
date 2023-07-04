@@ -87,7 +87,7 @@ const productos = [
 
   {
     id: 12,
-    nombre: "Cafetera para capsulas",
+    nombre: "Caf. Capsulas",
     categoria: "accesorios",
     precio: 40999,
     imagen: "../assets/img/12.png",
@@ -95,7 +95,7 @@ const productos = [
 
   {
     id: 13,
-    nombre: "Cafetera italiana",
+    nombre: "Caf. Italiana",
     categoria: "accesorios",
     precio: 25599,
     imagen: "../assets/img/13.png",
@@ -103,7 +103,7 @@ const productos = [
 
   {
     id: 14,
-    nombre: "Cafetera francesa",
+    nombre: "Caf. Francesa",
     categoria: "accesorios",
     precio: 12699,
     imagen: "../assets/img/14.png",
@@ -111,7 +111,7 @@ const productos = [
 
   {
     id: 15,
-    nombre: "Cafetera de filtro",
+    nombre: "Caf. Filtro",
     categoria: "accesorios",
     precio: 20299,
     imagen: "../assets/img/15.png",

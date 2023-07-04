@@ -27,7 +27,7 @@ const cargarProductosCarrito = () => {
            <img src="${imagen}" alt="${nombre}"/>
               <div class="item-datos">
                 <p>${nombre}</p>
-                <p>$${precio}</p>
+                <p>$${precio.toLocaleString()}</p>
               </div>
               <div class="item-cantidad">
                 <p>Cantidad</p>
@@ -35,7 +35,9 @@ const cargarProductosCarrito = () => {
               </div>
               <div class="item-subtotal">
                 <p>Subtotal</p>
-                <p id="calculo-subtotal">${precio * cantidad}</p>
+                <p id="calculo-subtotal">${(
+                  precio * cantidad
+                ).toLocaleString()}</p>
               </div>
               <button class="boton-eliminar" id="${id}"><i class="fa-solid fa-xmark"></i></button>
       `;
@@ -82,7 +84,7 @@ const actualizarTotal = () => {
     (acc, producto) => acc + producto.precio * producto.cantidad,
     0
   );
-  totalCarrito.innerText = `$${calculoTotal.toFixed(2)}`;
+  totalCarrito.innerText = `$${calculoTotal.toLocaleString()}`;
 };
 
 const comprarCarrito = () => {

@@ -678,7 +678,7 @@ textarea:focus {
   top: 0;
   right: 0;
   z-index: 5;
-  background-color: var(--brown-light);
+  background-color: var(--color-font);
   padding: 0.5rem;
   margin: 1rem;
   display: flex;

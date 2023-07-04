@@ -32,7 +32,7 @@ const cargarProductos = (productos) => {
     card.innerHTML += `
                     <img src="${imagen}" alt="${nombre}"/>
                     <p class="card-titulo">${nombre}</p>
-                    <p class="card-precio">$${precio}</p>
+                    <p class="card-precio">$${precio.toLocaleString()}</p>
                     <button class="boton-comprar" id="${id}"><i class="fa-solid fa-cart-plus"></i></button>
 
                `;
@@ -85,9 +85,9 @@ const agregarCarrito = (e) => {
   }
 
   actualizarNumerito();
-  modal.style.transform=("translateY(0)");
-  setTimeout(() => { modal.style.transform=("translateY(-200%)")
-    
+  modal.style.transform = "translateY(0)";
+  setTimeout(() => {
+    modal.style.transform = "translateY(-200%)";
   }, 1500);
 
   localStorage.setItem("productos-carrito", JSON.stringify(carrito));
@@ -117,12 +117,9 @@ const showUsuario = () => {
   usuarioActivo.textContent = `Hola, ${usuarioActivoSS.nombre}`;
 };
 
-
 const init = () => {
   cargarProductos(productos);
   filtroCategorias();
-
- 
 
   toggleMenu.addEventListener("click", mostrarMenu);
 
