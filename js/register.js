@@ -24,7 +24,7 @@ const isBetween = (input, min, max) => {
 
 //funcion correo válido
 const isEmailValid = (input) => {
-  const re = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const re = /\S+@\S+\.\S+/;
   return re.test(input.value.trim());
 };
 
@@ -188,11 +188,14 @@ const validateForm = (e) => {
     //Guardar en local storage
     saveToLocalStorage();
     //Feedback al usuario
-    modalRegistro.style.transform=("translateY(0)");
-  setTimeout(() => { modalRegistro.style.transform=("translateY(-200%)")
-    
-  }, 1500);
-  window.location.href
+    modalRegistro.style.transform = "translateY(0)";
+    setTimeout(() => {
+      modalRegistro.style.transform = "translateY(-200%)";
+    }, 1500);
+    //redirigir al login
+    setTimeout(() => {
+      window.location.href = "./login.html";
+    }, 2500);
   }
 };
 
